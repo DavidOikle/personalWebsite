@@ -4,7 +4,10 @@ Hello and welcome to my persoanl website/portfolio site! This is mostly for myse
 Broad goals:
 
 1: Work through The Odin Project: JavaScript path. 
-  I had previously started the Ruby path, but have opted to tackle the JavaScript path instead due to a marketability standpoint. Ideally I'd like to go back and takle ruby once I've completed the JavaScript side.
+
+I had previously started the Ruby path, but have opted to tackle the JavaScript path instead due to a marketability standpoint. Most developer jobs I see talk about JavaScript,  whereas I'm yet to see a single one that even mentions ruby. Python is another common one I've seen.
+
+Ideally I'd like to go back and takle ruby once I've completed the JavaScript side.
 
 2: Work through CodeAcademy.
   This is mostly a suppliment to Odin Project, as it's fairly unweildy to work on Odin Projct while at work, wheras Code Academy works directly through my browser. It's also not the primary learning vector, but is still nice from a Instant feedback perspective.
