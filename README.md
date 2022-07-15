@@ -26,5 +26,7 @@ I had previously built a basic website through The Odin Project but it was prett
 
 
 Ideas:
+
 TF2 themed Red/Blu CSS theme. Same page for both but have it be random which comes up.
+
 Pastel colours page? Nice and soft looking.
