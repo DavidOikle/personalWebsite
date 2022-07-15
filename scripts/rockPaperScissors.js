@@ -1,39 +1,58 @@
-https://benfowler04.github.io/rock-paper-scissors/ - Using this as a guide as TBH, Odin project was kind of impossible for me on it's own. Thanks ben!
+https://benfowler04.github.io/rock-paper-scissors/  `
 
-let playerScore = 0;
-let computerScore = 0;
-const buttons = document.querySelectorAll("input");
-    
-    
+let playerScore = 0
+let computerScore = 0
+const buttons = document.querySelectorAll('input')
+
 function computerPlay() {
- let choices = ["rock", "paper", "scissors"]
- return choices[Math.floor(Math.random() * choices.length]
+    let choices = ['rock', 'paper', 'scissors']
+    return choices[Math.floor(Math.random() * choices.length)]
 }
 
-/*
-Step 2: 
-Write a function that plays a single round of Rock Paper Scissors. 
-The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner of the round like so: 
-"You Lose! Paper beats Rock"
-*/
-
-function playRound(playerSelection){
-let computerSelection = computerPlayer()
-let result = ""
-
-if ((playerSelection == "rock" && computerSelection == "scissors") ||
-    (playerSelection == "paper" && computerSelection == "rock") ||
-    (playerSelection == "scissors" && computerSelection == "paper")) 
-{
- playerScore += 1
- {
-  result = ("You Win!" + playerSelection + 
- }
- 
-}
+function disableButtons() {
+    buttons.forEach(elem => {
+        elem.disabled = true
+    })
 }
 
-/*
-Step 3: 
-Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
-*/
+function playRound(playerSelection) {
+    let computerSelection = computerPlay()
+    let result = ""
+
+    if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+        (playerSelection == 'scissors' && computerSelection == 'paper') ||
+        (playerSelection == 'paper' && computerSelection == 'rock')) {
+        
+        playerScore += 1
+        result = ('You win! ' + playerSelection + ' beats ' + computerSelection
+            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+
+        if (playerScore == 5) {
+            result += '<br><br>You won the game! Reload the page to play again'
+            disableButtons()
+        }
+    }
+    else if (playerSelection == computerSelection) {
+        result = ('It\'s a tie. You both chose ' + playerSelection
+            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+    }
+    else {
+        computerScore += 1
+        result = ('You lose! ' + computerSelection + ' beats ' + playerSelection
+            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+
+        if (computerScore == 5) {
+            result += '<br><br>I won the game! Reload the page to play again'
+            disableButtons()
+        }
+    }
+
+    document.getElementById('result').innerHTML = result
+    return
+}
+
+buttons.forEach(button =>{
+    button.addEventListener('click', function(){
+        playRound(button.value)
+    })
+})
