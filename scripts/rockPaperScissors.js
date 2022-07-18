@@ -1,6 +1,7 @@
 let playerScore = 0
 let computerScore = 0
-const buttons = document.querySelectorAll('input')
+const buttons = document.querySelectorAll('button')
+*/input /*
 
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors']
