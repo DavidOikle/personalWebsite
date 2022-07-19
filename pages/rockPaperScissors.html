@@ -1,33 +1,54 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="../style/rockPaperScissors.css">
-  </head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<link rel="stylesheet" href="../style/rockPaperScissors.css">
+	<title>Rock Paper Scissor</title>
+</head>
 <body>
-  <p>One of the first assignements I did with the Odin Project was creating a basic Rock Paper Scissors game via JavaScript.
-  <br>
-  <br>
-  It gave me a heck of a lot more trouble than I expected my first time around. After taking a break and trying my hand at Ruby, I gave it another shot and it finally clicked into place!
-  <br>
-  <br>
-  I'll admit that I did end up more or less just following someone else doing it, but I felt proud with A: Being able to undeerstand every step they took, and B: being confident enough to make changes as I liked and still have it all work.
-  </p>
-  <div style="margin-bottom: 20px">
-    <input type="button" value="Rock"></input>
-    <input type="button" value="Paper"></input>
-    <input type="button" value="Scissors"></input>
-    <button onClick="window.location.reload();">Start over</button>
-    <button type="button">Rock</button>
-  </div>
-  <div id="result"></div>
-  <script src="../scripts/rockPaperScissors.js"></script>
-</body>
-</html
+	<section class="game">
+		<!--Title -->
+		<div class="title">Rock Paper Scissor</div>
+		
+		<!--Display Score of player and computer -->
+		<div class="score">
+			<div class="playerScore">
+				<h2>Player</h2>
+				<p class="p-count count">0</p>
 
-/* https://github.com/ethanngross/rockPaperScissors 
-https://ethanngross.github.io/rockPaperScissors/
-*/
+			</div>	
+			<div class="computerScore">
+				<h2>Computer</h2>
+				<p class="c-count count">0</p>
+
+			</div>
+		</div>
+	
+		<div class="move">Choose your move</div>
+		
+		<!--Number of moves left before game ends -->
+		<div class="movesleft">Moves Left: 10 </div>
+		
+		<!--Options available to player to play game -->
+		<div class="options">
+			<button class="rock">Rock</button>
+			<button class="paper">Paper</button>
+			<button class="scissor">Scissors</button>
+		</div>
+		
+		<!--Final result of game -->
+		<div class="result"></div>
+		
+		<!--Reload the game -->
+		<button class="reload"></button>
+
+	</section>
+
+	<script src="../scripts/rockPaperScissors.js"></script>
+</body>
+</html>
