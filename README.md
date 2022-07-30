@@ -30,3 +30,5 @@ Ideas:
 TF2 themed Red/Blu CSS theme. Same page for both but have it be random which comes up.
 
 Pastel colours page? Nice and soft looking.
+
+Additional resources: https://www.codecademy.com/courses/build-interactive-websites/lessons/dom-events/exercises/event-handlers
