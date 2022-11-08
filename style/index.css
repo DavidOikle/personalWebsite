@@ -1,0 +1,13 @@
+.navLeft {
+   
+    float:left;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.navRight {
+    
+    float:right;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
