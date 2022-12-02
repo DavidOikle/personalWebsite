@@ -1,1 +1,27 @@
-/* Inital CSS file for basicTextGame.js */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
+}
+
+.pAndEInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.pInfo {
+}
+
+.eInfo {
+}
+
+.pHealthBox {
+  border: 2px solid black;
+  display:inline-block
+}
+
+.pProfessionBox {
+  border: 2px solid black;
+  display:inline-block
+}
