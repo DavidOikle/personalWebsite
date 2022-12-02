@@ -1,34 +1,34 @@
-const pClass = 'wizard'
+const randomNumButton = document.getElementById("randomButton");
+const randomNumDisplay = document.getElementById("randomNumberDisplay")
 
-const playerClassHealth = pClass => {
-  if (pClass === 'warrior') {
-    return 10;
+var count = 0;
+
+randomNumberDisplay.innerHTML = count;
+
+const handleRandomNum = () => {
+
+  count = Math.floor(Math.random() * 10  ) + 1;
+  randomNumberDisplay.innerHTML = count;
+}
+
+randomNumButton.addEventListener("click", handleRandomNum);
+
+
+let playerProfession = 'warrior';
+
+let playerHealth = playerProfession => {
+  if (playerProfession === 'warrior') {
+    return 10
   }
-  else if (pClass === 'rouge') {
+  else if (playerProfession === 'rouge') {
     return 8
   }
-  else if (pClass === 'wizard') {
+  else if (playerProfession === 'wizard') {
     return 6
-  }
-  else {
-    return "Please select warrior, rouge, or wizard."
   }
 };
 
-const playerClass = pClass => {
-  if (pClass === 'warrior') {
-    return 'warrior';
-  }
-  else if (pClass === 'rouge') {
-    return 'rouge'
-  }
-  else if (pClass === 'wizard') {
-    return 'wizard'
-  }
-  else {
-    return "Please select warrior, rouge, or wizard."
-  }
-}
+document.getElementById("pHealth").innerHTML = `${playerHealth(playerProfession)}`;
+document.getElementById("pProfession").innerHTML = `${playerProfession}`;
 
-console.log(`You are a ${pClass}, your health is ${playerClassHealth(`${pClass}`)} `)
 
