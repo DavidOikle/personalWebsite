@@ -1,8 +1,50 @@
-html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+/* Universal modifiers; copied from Index.css. */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
 }
+
+* {
+  font-family: arial;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.header {
+  display: flex;
+  justify-content: space-between
+}
+
+.navLeft {
+  border: 1px solid black;
+}
+
+.navRight {
+  border: 1px solid black;
+}
+
+.navLink {
+  margin: 0px 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.social {
+  margin: 0px 20px;
+}
+
+.content {
+  padding: 0px 50px;
+}
+
+/* Modifiers for basic Text Game. */
 
 .pAndEInfo {
   display: flex;
@@ -23,5 +65,15 @@ html, body {
 
 .pProfessionBox {
   border: 2px solid black;
+  display:inline-block
+}
+
+.eHealthBox {
+  border: 2px solid black;
+  display:inline-block
+}
+
+.eProfessionBox {
+    border: 2px solid black;
   display:inline-block
 }
