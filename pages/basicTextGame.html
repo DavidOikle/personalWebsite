@@ -8,10 +8,34 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="../style/basicTextGame.css">
   </head>
+      <nav>
+      <!-- Navigation menu split into topLeft and topRight.-->
+    <div class="header">
+        <div class='navLeft'>
+          <a href="index.html" class='navLink'>About me</a> 
+          <a class='navLink' href="fullResume.html">Full Resume</a> <!-- Seperate webpage? -->
+        </div>
+        <div class='navRight'>
+            <a href='collectedSmallProjects.html' class='navLink'>Collected Small Projects</a>
+            <a href='basicTextGame.html' class='navLin='>Basic Web Game</a>
+        </div> 
+      </div>
+    </nav>
   <body>
     <div id="randomButtonZone">
-      <div id="randomButton">Random number!</div>
+      <div id="randomButton">Random number! Click me!</div>
       <div id="randomNumberDisplay"></div>
+    </div>
+
+    <!-- <div id="randomEnemyZone">
+      <div id="randomEnemyButton">Random enemy! Under Construction.</div>
+      For now, going to have the same idea of code for the randomEnemyDisplay as the random number from earlier, eventualy it would be ideal to have a string that is somehting like "You encounter a ${randomEnemy}" or something similar.
+      <div id="randomEnemyDisplay"></div>
+    </div> -->
+    <div id="classChoiceZone">
+      <div id="warriorButton">Warrior</div>
+      <div id="rougeButton">Rouge</div>
+      <div id="wizardButton">Wizard</div>
     </div>
     <div class="pAndEInfo">
       <div class="pInfo">
@@ -25,10 +49,22 @@
         </div>
       </div>
       <div class="eInfo">
-        <p>Temp</p>
+        <div class="eHealthBox">
+          <p>Enemy Health</p>
+          <div id="eHealth"></div>
+        </div>
+        <div class="eProfessionBox">
+          <p>Enemy</p>
+          <div id="eProfession"></div>
+        </div>
       </div>
     </div>
     <script src="../scripts/basicTextGame.js"></script>
 
   </body>
+
+   <footer class='footer'>
+    <a href='https://github.com/DavidOikle' target="_blank" class='social'><img src='https://raw.githubusercontent.com/DavidOikle/personalWebsite/main/assets/Github_black.png' style="width:42px;height:42px;"></a>
+    <a href='https://instagram.com/davidoikle' target="_blank" class='social'><img src='https://raw.githubusercontent.com/DavidOikle/personalWebsite/main/assets/Instagram_black.png' style='width:42px;height:42px;'></a>
+    </footer>
 </html>
