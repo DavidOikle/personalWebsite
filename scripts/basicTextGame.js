@@ -56,9 +56,41 @@ warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceWizard);
 wizardButton.addEventListener("click", playerChoiceRogue);
 
-/* Goal 2: inpliment a button that upon pressing, picks a random enemy from a list of options, and updates the enemy boxes in the HTML with the relevant information.
+/* Random Enemy Generator. Like the class choice generator, it at the moment can be clicked to give a new option each time. Eventually need to add in a part where it Hides the button upon being clicked, and then later on, shows the button once the enemy's health is 0 or lower. */
 
- const randomEnemyButton = document.getElementById("randomEnemyButton");
-const randomEnemyDisplay = document.getElementById("randomEnemyDisplay");
-*/
+const randomEnemyButton = document.getElementById("randomEnemyButton");
+const enemyHealthDisplay = document.getElementById("eHealth")
+const enemyProfessionDisplay = document.getElementById("eProfession")
+
+let enemyHealth = null;
+let enemyProfession = '';
+
+enemyHealthDisplay.innerHTML = enemyHealth;
+enemyProfessionDisplay.innerHTML = enemyProfession;
+
+
+
+const randomEnemyFunction = () => {
+      const randomEnemyNumber = Math.floor(Math.random() * 3) 
+          if (randomEnemyNumber == 0){
+            enemyProfession = "Bandit"
+              enemyHealth = "8";
+          enemyHealthDisplay.innerHTML = enemyHealth;
+          enemyProfessionDisplay.innerHTML = enemyProfession;
+          }
+          else if (randomEnemyNumber == 1){
+            enemyProfession = "Brute"
+                          enemyHealth = "10";
+          enemyHealthDisplay.innerHTML = enemyHealth;
+          enemyProfessionDisplay.innerHTML = enemyProfession;
+          }
+          else if (randomEnemyNumber == 2){
+            enemyProfession = "Necromancer"
+            enemyHealth = "6";
+            enemyHealthDisplay.innerHTML = enemyHealth;
+            enemyProfessionDisplay.innerHTML = enemyProfession;
+          }
+}
+randomEnemyButton.addEventListener("click", randomEnemyFunction);
+
 
