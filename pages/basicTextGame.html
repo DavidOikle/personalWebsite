@@ -16,44 +16,70 @@
           <a class='navLink' href="fullResume.html">Full Resume</a> <!-- Seperate webpage? -->
         </div>
         <div class='navRight'>
-            <a href='collectedSmallProjects.html' class='navLink'>Collected Small Projects</a>
+           <!-- <a href='collectedSmallProjects.html' class='navLink'>Collected Small Projects</a> -->
             <a href='basicTextGame.html' class='navLin='>Basic Web Game</a>
         </div> 
       </div>
     </nav>
 
   <body>
-
+    
+  <p> Welcome to the Basic web game project! This is project im using to practice concepts from my learning of web development. Pick a class, create a random enemy, and attack! More features are added as I learn and figure things out, so check back regularly.</p>
     <div id="randomButtonZone">
-      <div id="randomButton">Random number! Click me!</div>
+      <div id="attackButton">Attack!</div>
+  <br>
       <div id="randomNumberDisplay"></div>
     </div>
- 
+ <br>
     <div id="classChoiceZone">
       <div id="warriorButton">Warrior</div>
       <div id="rogueButton">Rouge</div>
       <div id="wizardButton">Wizard</div>
     </div>
+<br>
   <div id="randomEnemyZone">
     <div id="randomEnemyButton">Random Enemy Button!</div>
   </div>
 
+<div class="parentCombatLogBox">
+  <div class="playerCombatLogBox">
+     <div>Player Action</div>
+     <div id="playerCombatLog"></div>
+  </div>
+  <div class="enemyCombatLogBox">
+      <div>Enemy Action</div>
+      <div id="enemyCombatLog"></div>
+    </div>
+</div>
 
     <div class="pAndEInfo">
       <div class="pInfo">
           <div class="pHealthBox">
-            <p>Player Health</p>
-          <div id="pHealth"></div>
+            <p class="playerHealthTitle">Player Health</p>
+          <div class= "playerHealthElements">
+            <div id="pHealth"></div>
+            <div class="boxDivider"> / </div>
+            <div id="pMaxHealth"></div>
+          </div>
         </div>
         <div class="pProfessionBox">
           <p>Player Profession</p>
           <div id="pProfession"></div>
         </div>
+        <div class="pExperinceBox">
+          <p class="playerHealthTitle">Experince</p>
+          <div class= "playerHealthElements">
+            <div id="pExperince"></div>
+            <div class="boxDivider"> / </div>
+            <div id="pMaxExperience"></div>
+          </div>
+         </div>
       </div>
       <div class="eInfo">
         <div class="eHealthBox">
-          <p>Enemy Health</p>
+          <p class ="enemyHealthTitle">Enemy Health</p>
           <div id="eHealth"></div>
+          <div id="enemyMaxHealth"></div>
         </div>
         <div class="eProfessionBox">
           <p>Enemy</p>
