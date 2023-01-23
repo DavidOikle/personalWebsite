@@ -171,3 +171,5 @@ DONE DEC 31st 2022--- 3: Unhide the random enemy button once an enemy is defeate
 Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt to eachother. 
 
 */
+
+
