@@ -44,7 +44,11 @@ a {
   padding: 0px 50px;
 }
 
-/* Modifiers for basic Text Game. */
+/* Modifiers for basic Text Game. 
+Goals: 
+      Give a minimum value for the boxes for player/enemy health/name displays so they dont shrink and stretch when empty vs containing text. 
+
+*/
 
 .pAndEInfo {
   display: flex;
@@ -53,27 +57,96 @@ a {
 }
 
 .pInfo {
+    text-align: center;
 }
 
 .eInfo {
+    text-align: center;
 }
 
 .pHealthBox {
   border: 2px solid black;
-  display:inline-block
+  min-width: 125px;
+  min-height: 100px;
+  display:inline-block;
+}
+
+.playerHealthElements {
+  display: flex;
+  justify-content: center;
 }
 
 .pProfessionBox {
   border: 2px solid black;
-  display:inline-block
+  min-width: 125px;
+  min-height: 100px;
+  display:inline-block;
+  
 }
 
 .eHealthBox {
   border: 2px solid black;
-  display:inline-block
+  display:inline-block;
+  min-height: 100px;
+  min-width: 125px;
+  text-align: center;
 }
 
 .eProfessionBox {
-    border: 2px solid black;
-  display:inline-block
+  border: 2px solid black;
+  display:inline-block;
+  min-height: 100px;
+  min-width: 125px;
+}
+
+#classChoiceZone {
+  border: 2px solid black;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.pExperinceBox {
+  border: 2px solid black;
+  display:inline-block;
+  min-width: 125px;
+  min-height: 100px;
+}
+
+.parentCombatLogBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.playerCombatLogBox {
+  border: 2px solid black;
+  display:inline-block;
+  min-width: 250px;
+  min-height: 100px;
+  text-align: center;
+}
+
+.playerCombatLog { 
+  //Keep empty
+}
+
+.enemyCombatLogBox { 
+  border: 2px solid black;
+  display:inline-block;
+  min-width: 250px;
+  min-height: 100px;
+  text-align: center;
+}
+
+.enemyCombatLog { 
+  //Keep empty
+}
+
+.playerHealthTitle {
+}
+
+.boxDivider {
+  padding: 0px;
 }
