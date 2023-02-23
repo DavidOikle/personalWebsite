@@ -21,7 +21,7 @@ const handleAttack = () => {
   enemyProfessionDisplay.innerHTML = enemyProfession;
    document.getElementById("randomEnemyButton").style.visibility = "visible";
   playerExperience = playerExperience++;
-   playerExperinceDisplay.innerHTML = playerExperience;
+   playerExperienceDisplay.innerHTML = playerExperience;
 } 
 
  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
