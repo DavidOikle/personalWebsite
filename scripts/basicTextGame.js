@@ -58,18 +58,18 @@ const playerHealthDisplay = document.getElementById("pHealth");
 const playerProfessionDisplay = document.getElementById("pProfession");
 const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
 const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
-const playerExperinceDisplay = document.getElementById("pExperience");
+const playerExperienceDisplay = document.getElementById("pExperience");
 
 let playerHealth = null;
 let playerProfession = '';
 let playerMaxHealth = null;
-let playerExperince = null;
+let playerExperience = null;
 let playerMaxExperience = null;
 
 playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
 playerMaxHealthDisplay.innerHTML = playerMaxHealth;
-let playerExperinceDisplay.innerHTML = playerExperience;
+let playerExperienceDisplay.innerHTML = playerExperience;
 playerMaxExperienceDisplay.innerHTML = null;
 
 
