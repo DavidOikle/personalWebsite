@@ -20,7 +20,7 @@ const handleAttack = () => {
   enemyHealthDisplay.innerHTML = enemyHealth;
   enemyProfessionDisplay.innerHTML = enemyProfession;
    document.getElementById("randomEnemyButton").style.visibility = "visible";
-  playerExperience = playerExperience++;
+  playerExperience++;
    playerExperienceDisplay.innerHTML = playerExperience;
 } 
 
@@ -63,7 +63,7 @@ const playerExperienceDisplay = document.getElementById("pExperience");
 let playerHealth = null;
 let playerProfession = '';
 let playerMaxHealth = null;
-let playerExperience = null;
+let playerExperience = 0;
 let playerMaxExperience = null;
 
 playerHealthDisplay.innerHTML = playerHealth;
