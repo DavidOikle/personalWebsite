@@ -69,7 +69,6 @@ let playerMaxExperience = null;
 playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
 playerMaxHealthDisplay.innerHTML = playerMaxHealth;
-let playerExperienceDisplay.innerHTML = playerExperience;
 playerMaxExperienceDisplay.innerHTML = null;
 
 
