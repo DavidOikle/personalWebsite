@@ -1,0 +1,12 @@
+Pushing a folder/repository to Github
+
+After doing all the linking (notes to come later, as I've already done it a few times so it works for my current project),
+1: Find the desired folder/repo. (Odin-Project/repos/personalWebsite).
+2: git add . (the . adds the whole folder, otherwsie just do a file name).
+3: git commit -m "Commit Message" 
+4: git push.
+5: Confirm update on github by checking the update history, or the file's changes.
+
+To pull changes from github to a local folder:
+1: Find the desired folder/repo. (Odin-Project/repos/personalWebsite).
+2: Git pull (maybe pull . , need to test more).
