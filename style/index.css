@@ -12,6 +12,22 @@ a {
   text-decoration: none;
   color: black;
 }
+
+a:link {
+
+}
+a:visited {
+
+}
+
+a:hover {
+  color: gray;
+}
+
+a:active {
+  
+}
+
 .header {
   display: flex;
   justify-content: space-between

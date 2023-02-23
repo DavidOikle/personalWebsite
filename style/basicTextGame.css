@@ -13,6 +13,22 @@ a {
   text-decoration: none;
   color: black;
 }
+
+a:link {
+
+}
+a:visited {
+
+}
+
+a:hover {
+  color: gray;
+}
+
+a:active {
+  
+}
+
 .header {
   display: flex;
   justify-content: space-between
@@ -58,17 +74,20 @@ Goals:
 
 .pInfo {
     text-align: center;
+    display: inline-flex;
 }
 
 .eInfo {
     text-align: center;
+    display: inline-flex;
 }
 
-.pHealthBox {
-  border: 2px solid black;
-  min-width: 125px;
+.pHealthBox {  border: 2px solid black;
+  min-width: 150px;
   min-height: 100px;
+  border: 2px solid black;
   display:inline-block;
+  margin: 5px;
 }
 
 .playerHealthElements {
@@ -78,9 +97,10 @@ Goals:
 
 .pProfessionBox {
   border: 2px solid black;
-  min-width: 125px;
+  min-width: 150px;
   min-height: 100px;
   display:inline-block;
+  margin: 5px;
   
 }
 
@@ -88,15 +108,17 @@ Goals:
   border: 2px solid black;
   display:inline-block;
   min-height: 100px;
-  min-width: 125px;
+  min-width: 150px;
   text-align: center;
+  margin: 5px;
 }
 
 .eProfessionBox {
   border: 2px solid black;
   display:inline-block;
   min-height: 100px;
-  min-width: 125px;
+  min-width: 150px;
+  margin: 5px;
 }
 
 #classChoiceZone {
@@ -110,8 +132,9 @@ Goals:
 .pExperinceBox {
   border: 2px solid black;
   display:inline-block;
-  min-width: 125px;
+  min-width: 150px;
   min-height: 100px;
+  margin: 5px;
 }
 
 .parentCombatLogBox {
@@ -128,10 +151,6 @@ Goals:
   text-align: center;
 }
 
-.playerCombatLog { 
-  //Keep empty
-}
-
 .enemyCombatLogBox { 
   border: 2px solid black;
   display:inline-block;
@@ -140,13 +159,18 @@ Goals:
   text-align: center;
 }
 
-.enemyCombatLog { 
-  //Keep empty
-}
-
-.playerHealthTitle {
-}
-
 .boxDivider {
   padding: 0px;
+  margin: 0px;
+  border: 0px;  
 }
+
+#attackButton {
+  max-width: 50px;
+  border: 2px solid black;
+}
+
+#attackButton:hover {
+  color: gray;
+}
+
