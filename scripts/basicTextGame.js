@@ -64,12 +64,12 @@ let playerHealth = null;
 let playerProfession = '';
 let playerMaxHealth = null;
 let playerExperience = null;
-let playerMaxExperience = 10;
+let playerMaxExperience = null;
 
 playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
 playerMaxHealthDisplay.innerHTML = playerMaxHealth;
-playerMaxExperienceDisplay.innerHTML = null;
+playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
 
 
 const playerChoiceWarrior = () => {
