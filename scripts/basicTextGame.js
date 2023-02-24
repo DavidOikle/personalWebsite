@@ -79,6 +79,9 @@ const playerChoiceWarrior = () => {
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceRogue = () => {
@@ -89,6 +92,9 @@ const playerChoiceRogue = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceWizard = () => {
@@ -99,6 +105,9 @@ const playerChoiceWizard = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 warriorButton.addEventListener("click", playerChoiceWarrior);
