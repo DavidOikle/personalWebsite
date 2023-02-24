@@ -158,9 +158,30 @@ const levelUp = () => {
   }
 }
 */
+/*Pseduo code/overall logic for functions:
 
+Until I can figure out a way to just run/constantly loop certain functions until specific criteria are met (EX: player HP reaches 0, so restart the game), the following idea may be the best option:
+Seperate out any and all functions.
+For every round of combat, run a parent function that also calls and runs all childern. 
+Childern include: 
+Combat rolls for player and enemy.
+Player health
+Enemy health/combat end
+Player XP
 
+Could subdivide these into the following as most only need to be called at specific times:
+During encounter
+Post encounter
 
+The idea is the following:
+
+startingFunction(gameplay or something) = () => {
+   if in combat (can setup a variable that flips a boolean from false to true and then checks) then run the following group of functions: combat rolls and such
+   if enemy health reaches 0, run the following: xp gain, gold gain, etc. 
+}
+One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
+
+*/
 
 
 /*
