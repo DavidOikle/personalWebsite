@@ -64,7 +64,7 @@ let playerHealth = null;
 let playerProfession = '';
 let playerMaxHealth = null;
 let playerExperience = 0;
-let playerMaxExperience = null;
+let playerMaxExperience = 10;
 
 playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
@@ -142,16 +142,22 @@ const randomEnemyFunction = () => {
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
 
-// ----- Combat Log
 
-/* Need to establish a box in the HTML, have it have 2 sections. One for the player's damage, one for the enemy. 
 
-Within those, have 2 parts that each are imported into the JS side. 
-Then have the output of the JS side reflect the damage and such dealt. Find where the damage each side does is stored, and 
 
+//Level up, XP reset, and max XP increase function. 
+//PseudoCoded for now
+
+/*
+const levelUp = () => {
+  if (playerXP == playerMaxXp){
+    playerXP = 0;
+    playerMaxXP = playerMaxXP * 2
+    playerHealth = playerMaxHealth
+    playerMaxHeath = playerMaxHealth * 1.1
+  }
+}
 */
-
-
 
 
 
@@ -163,7 +169,7 @@ DONE DEC 31st 2022--- 1: reset health/enemy names to null/"" when the enemies he
 DONE DEC 31st 2022--- 2: Hide the random enemy button once it is clicked.
 DONE DEC 31st 2022--- 3: Unhide the random enemy button once an enemy is defeated.
 4: Hide the player class choice buttons when one is clicked.
-5: Give the player a basic XP counter that increments by +1 when defeating an enemy.
+DONE FEB 23rd 2023--- 5: Give the player a basic XP counter that increments by +1 when defeating an enemy.
 6: Give the player a basic gold couunter that increments by a semi random value when defeating an enemy. Maybe rolls a number and either muliply it or add to is based on the type of enemy defeated.
 7: Establish a game over/try again screen when the player is defeated.
 8: Recover the player's health, to start when defeating an enemy. 
