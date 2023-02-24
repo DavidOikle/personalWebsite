@@ -63,7 +63,7 @@ const playerExperienceDisplay = document.getElementById("pExperience");
 let playerHealth = null;
 let playerProfession = '';
 let playerMaxHealth = null;
-let playerExperience = 0;
+let playerExperience = null;
 let playerMaxExperience = 10;
 
 playerHealthDisplay.innerHTML = playerHealth;
