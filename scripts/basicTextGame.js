@@ -191,6 +191,15 @@ startingFunction(gameplay or something) = () => {
 One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
 
 */
+/*
+Pseduo code for HP and regain.
+if enemyHealth <= 0 {
+  playerHeath = playerHealth + playerMaxHealth * 0.5
+  if playHealth >= maxPlayerHealth {
+    playerHealth = maxPlayerHealth
+  }
+}
+*/
 
 
 /*
