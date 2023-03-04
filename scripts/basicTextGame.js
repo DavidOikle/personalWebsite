@@ -1,34 +1,21 @@
 /* Attacking an enemy/enemy attacking the player at the same time. */
 
+var playerDamageRoll = 0;
+var enemyDamageRoll = 0;
+
+var playerHealth = null;
+var playerProfession = '';
+var playerMaxHealth = null;
+var playerExperience = null;
+var playerMaxExperience = null;
+
+
 const randomNumAttack = document.getElementById("attackButton");
 
 //  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll()} damage.`
 
-var playerDamageRoll = 0;
-var enemyDamageRoll = 0;
 
-const handleAttack = () => {
-
-  playerDamageRoll = Math.floor(Math.random() * 10  ) + 1;
-  enemyHealth = enemyHealth - playerDamageRoll;
-  enemyHealthDisplay.innerHTML = enemyHealth;
-
-  // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
-  if (enemyHealth <= 0) {
-  enemyHealth = null;
-  enemyProfession = '';
-  enemyHealthDisplay.innerHTML = enemyHealth;
-  enemyProfessionDisplay.innerHTML = enemyProfession;
-   document.getElementById("randomEnemyButton").style.visibility = "visible";
-  playerExperience++;
-   playerExperienceDisplay.innerHTML = playerExperience;
-} 
-
- playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
- 
-}
-
-const enemyAttack = () => {
+let enemyAttack = () => {
    enemyDamageRoll = Math.floor(Math.random() * 4  ) + 1;
    playerHealth = playerHealth - enemyDamageRoll;
    playerHealthDisplay.innerHTML = playerHealth;
@@ -44,6 +31,30 @@ const enemyAttack = () => {
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
 
+let handleAttack = () => {
+  playerDamageRoll = Math.floor(Math.random() * 10  ) + 1;
+  enemyHealth = enemyHealth - playerDamageRoll;
+  enemyHealthDisplay.innerHTML = enemyHealth;
+
+  // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
+  if (enemyHealth <= 0) {
+  enemyHealth = null;
+  enemyProfession = '';
+  enemyHealthDisplay.innerHTML = enemyHealth;
+  enemyProfessionDisplay.innerHTML = enemyProfession;
+   document.getElementById("randomEnemyButton").style.visibility = "visible";
+  playerExperience++;
+   playerExperienceDisplay.innerHTML = playerExperience;
+
+  playerHealth = playerHealth + playerMaxHealth * 0.5;
+  if (playerHealth > playerMaxHealth) {
+    playerHealth = playerMaxHealth
+  }
+}
+ 
+ playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
+ 
+}
 
 // Condense this by having a parent function surround the handleAattack and enemyAttack function, and then invoke that single function. Maybe call it just combat or something?
 randomNumAttack.addEventListener("click", handleAttack);
@@ -60,11 +71,7 @@ const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
 const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
 const playerExperienceDisplay = document.getElementById("pExperience");
 
-let playerHealth = null;
-let playerProfession = '';
-let playerMaxHealth = null;
-let playerExperience = null;
-let playerMaxExperience = null;
+
 
 playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
@@ -191,15 +198,6 @@ startingFunction(gameplay or something) = () => {
 One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
 
 */
-/*
-Pseduo code for HP and regain.
-if enemyHealth <= 0 {
-  playerHeath = playerHealth + playerMaxHealth * 0.5
-  if playHealth >= maxPlayerHealth {
-    playerHealth = maxPlayerHealth
-  }
-}
-*/
 
 
 /*
@@ -211,7 +209,7 @@ DONE DEC 31st 2022--- 3: Unhide the random enemy button once an enemy is defeate
 DONE FEB 23rd 2023--- 5: Give the player a basic XP counter that increments by +1 when defeating an enemy.
 6: Give the player a basic gold couunter that increments by a semi random value when defeating an enemy. Maybe rolls a number and either muliply it or add to is based on the type of enemy defeated.
 7: Establish a game over/try again screen when the player is defeated.
-8: Recover the player's health, to start when defeating an enemy. 
+DONE MARCH 4th 2023--- 8: Recover the player's health, to start when defeating an enemy. 
 9: Establish a level up system for the player that makes the stronger, and recovers health when leveling. Also have it reset the XP counter, and raise said counter. 
 10: Use of gold system. Buying healing at a shop, eventually items or something like that.
 11: Additional inputs for the player, in particular a name + pronouns. Set the pronouns up in some sort of variable that can later be referenced like ${subjectPronoun} ${objectPronoun} (they/them respectivley in this case).
@@ -220,5 +218,7 @@ DONE FEB 23rd 2023--- 5: Give the player a basic XP counter that increments by +
 Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt to eachother. 
 
 */
+
+
 
 
