@@ -129,6 +129,7 @@ UPDATE: Dec 7th 2022: Not 5 minutes later do I start the factory functions secti
 
 const randomEnemyButton = document.getElementById("randomEnemyButton");
 const enemyHealthDisplay = document.getElementById("eHealth")
+const enemyMaxHealth = document.getElementById("eMaxHealth")
 const enemyProfessionDisplay = document.getElementById("eProfession")
 
 let enemyHealth = null;
@@ -142,14 +143,17 @@ const randomEnemyFunction = () => {
           if (randomEnemyNumber == 0){
             enemyProfession = "Bandit"
             enemyHealth = "8";
+            enemyMaxHealth = "8";
           }
           else if (randomEnemyNumber == 1){
             enemyProfession = "Brute"
             enemyHealth = "10";
+            enemyMaxHealth = "10";
           }
           else if (randomEnemyNumber == 2){
             enemyProfession = "Necromancer"
             enemyHealth = "6";
+            enemyMaxHealth = "6";
           }
     document.getElementById("randomEnemyButton").style.visibility = "hidden";
     enemyHealthDisplay.innerHTML = enemyHealth;
