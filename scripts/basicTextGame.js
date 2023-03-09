@@ -129,7 +129,7 @@ UPDATE: Dec 7th 2022: Not 5 minutes later do I start the factory functions secti
 
 const randomEnemyButton = document.getElementById("randomEnemyButton");
 const enemyHealthDisplay = document.getElementById("eHealth")
-const enemyMaxHealth = document.getElementById("eMaxHealth")
+const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
 const enemyProfessionDisplay = document.getElementById("eProfession")
 
 let enemyHealth = null;
@@ -157,6 +157,7 @@ const randomEnemyFunction = () => {
           }
     document.getElementById("randomEnemyButton").style.visibility = "hidden";
     enemyHealthDisplay.innerHTML = enemyHealth;
+    enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
 }
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
