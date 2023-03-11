@@ -1,0 +1,28 @@
+Text file for brainstorming some ideas for the Basic Text game.
+
+What's the combat? Right now it's just a matter of having a regular attack. What's the benefit to a wizard casting a spell, a rouge shooting a bow?
+Can do a similar idea to what Slice and Dice does, where there are modifiers to any ability.
+A fireball does whatever damage, and also has the FIRE tag, which does extra damage aganist say, FIRE-WEAK targets.
+Almost a pokemon style thing?
+A bow has RANGED, any sort of melee weapon has MELEE. Can also go wild and do things like SLASHING, BLUNT, etc.
+Probably best to keep it simple for now. 
+
+To start, is it ranged, or melee? 
+Does it have an element attached to it?
+
+And conversley on the enemy side, have weakness's / resistances.
+Keep it simple for now where its either X2 or X0.5 damage.
+A fire elemental takes less damage from fire spells for example.
+
+In addition, the melee/ranged can also provide a modifer on accuracy, and maybe eventually a thorns type effect.
+A lightning elemental can do some additional damage to melee attacks that wouldnt be present on ranged hits. 
+A ranged hit can have higher accuracy to a target that has FLYING.
+
+So, instead of having Attack/casting a spell/shoot a bow/etc be hard coded to the classes, instead have them factory functions that have modifiers attached to them.
+And at the same time, make the enemies factory functions that have modifers for their things like flying/an element/etc.
+
+Probably don't actually NEED to make all these with factory functions, but I associate the idea of having modifers and such to them due to how Code academy approaches them.
+
+STEP 1: Remake all abilities and enemies as factory functions. Have just the melee/ranged modifier for the weapons/spells for now. Enemies get basic elements if applicable.
+
+THERE IS AN OPTION TO GO FULL POKEMON AND MAKE EVERYTHING HAVE A ELEMENT WITH IT. Actually nah don't do this, fuck it.
