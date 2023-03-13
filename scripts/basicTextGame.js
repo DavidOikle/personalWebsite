@@ -162,6 +162,16 @@ const randomEnemyFunction = () => {
 }
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
+/*
+Factory functions inital setup.
+
+const bandit = {
+   name: 'bandit',
+   maxHealth: 8,
+   traits: 'ranged', 
+}
+
+*/
 
 
 
