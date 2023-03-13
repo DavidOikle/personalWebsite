@@ -138,6 +138,8 @@ let enemyProfession = '';
 enemyHealthDisplay.innerHTML = enemyHealth;
 enemyProfessionDisplay.innerHTML = enemyProfession;
 
+
+
 const randomEnemyFunction = () => {
       const randomEnemyNumber = Math.floor(Math.random() * 3) 
           if (randomEnemyNumber == 0){
@@ -165,11 +167,17 @@ randomEnemyButton.addEventListener("click", randomEnemyFunction);
 /*
 Factory functions inital setup.
 
-const bandit = {
-   name: 'bandit',
-   maxHealth: 8,
-   traits: 'ranged', 
+function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
+  return {
+    enemyProfession,
+    enemyHealth,
+    enemyMaxHealth,
+  }
 }
+
+
+const newEnemy = enemyFactory('Bandit', 8, 8)
+
 
 */
 
