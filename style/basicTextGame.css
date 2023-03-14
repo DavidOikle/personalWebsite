@@ -84,7 +84,7 @@ Goals:
 
 .pHealthBox { 
   border: 5px solid black;
-  min-width: 1500px;
+  min-width: 150px;
   min-height: 100px;
   display:inline-block;
   margin: 5px;
@@ -97,47 +97,12 @@ Goals:
   justify-content: center;
 }
 
-.pProfessionBox {
-  border: 2px solid black;
-  min-width: 150px;
-  min-height: 100px;
-  display:inline-block;
-  margin: 5px;
-  
-}
-
-.eHealthBox {
-  border: 2px solid black;
-  min-width: 150px;
-  min-height: 100px;
-  border: 2px solid black;
-  display:inline-block;
-  margin: 5px;
-}
-
-
-.eProfessionBox {
-  border: 2px solid black;
-  min-width: 150px;
-  min-height: 100px;
-  display:inline-block;
-  margin: 5px;
-}
-
 #classChoiceZone {
   border: 2px solid black;
   display: inline-block;
   display: flex;
   justify-content: space-between;
   width: 300px;
-}
-
-.pExperienceBox {
-  border: 2px solid black;
-  display:inline-block;
-  min-width: 150px;
-  min-height: 100px;
-  margin: 5px;
 }
 
 .parentCombatLogBox {
