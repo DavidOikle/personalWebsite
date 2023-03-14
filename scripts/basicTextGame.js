@@ -8,6 +8,8 @@ var playerProfession = '';
 var playerMaxHealth = null;
 var playerExperience = null;
 var playerMaxExperience = null;
+var playerGold = 0;
+
 
 
 const randomNumAttack = document.getElementById("attackButton");
@@ -70,6 +72,7 @@ const playerProfessionDisplay = document.getElementById("pProfession");
 const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
 const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
 const playerExperienceDisplay = document.getElementById("pExperience");
+const playerGoldDisplay = document.getElementById("pGold");
 
 
 
@@ -77,6 +80,7 @@ playerHealthDisplay.innerHTML = playerHealth;
 playerProfessionDisplay.innerHTML = playerProfession;
 playerMaxHealthDisplay.innerHTML = playerMaxHealth;
 playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
+playerGoldDisplay.innerHTML = playerGold;
 
 
 const playerChoiceWarrior = () => {
