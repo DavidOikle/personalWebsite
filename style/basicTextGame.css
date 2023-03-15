@@ -90,6 +90,7 @@ Goals:
   margin: 5px;
   border-radius: 15px;
   background: rgb(200, 175, 100);
+  font-weight: bold;
 }
 
 .playerHealthElements {
