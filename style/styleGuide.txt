@@ -1,0 +1,9 @@
+General style guide for various pages:
+
+BASIC TEXT GAME:
+
+  COLOURS: FIGURING IT OUT
+  
+  Idea is to have a consistent colour palete that I can stick to. IE: Buttons should have X background colour, they should do the following on hover, and the following on being pressed down.
+  
+  
