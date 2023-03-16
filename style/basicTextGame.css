@@ -141,7 +141,7 @@ Goals:
 }
 
 #attackButton {
-  display: inline-block;
+  display: inline-flex;
   border: 5px solid;
   border-color: #deb045;
   border-radius: 15px;
