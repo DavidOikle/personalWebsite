@@ -74,7 +74,8 @@ Goals:
 
 .pInfo {
     text-align: center;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .eInfo {
