@@ -141,11 +141,12 @@ Goals:
 }
 
 #attackButton {
-  display: flex;
+  display: inline-block;
   border: 5px solid;
   border-color: #deb045;
   border-radius: 15px;
   padding 5px;
+  width-max:
 }
 
 #attackButton:hover {
