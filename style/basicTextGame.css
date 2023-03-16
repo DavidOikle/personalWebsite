@@ -80,6 +80,7 @@ Goals:
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 5px solid;
     border-color: #deb045;
     border-radius: 15px;
 }
