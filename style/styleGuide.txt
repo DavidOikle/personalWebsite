@@ -1,4 +1,5 @@
 General style guide for various pages:
+resources: https://cssgradient.io/swatches/
 
 BASIC TEXT GAME:
 
