@@ -145,8 +145,7 @@ Goals:
   border: 5px solid;
   border-color: #deb045;
   border-radius: 15px;
-  padding 5px;
-  width-max:
+  padding: 5px;
 }
 
 #attackButton:hover {
