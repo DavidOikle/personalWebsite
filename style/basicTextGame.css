@@ -88,10 +88,11 @@ Goals:
   min-width: 150px;
   min-height: 100px;
   display:inline-block;
-  margin: 5px;
   border-radius: 15px;
-  background: rgb(200, 175, 100);
+  background: #3273a3 
   font-weight: bold;
+  color: white;
+  border-color: #deb045;
 }
 
 .playerHealthElements {
