@@ -3,10 +3,14 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #3273a3;
 }
 
+
 * {
-  font-family: arial;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-weight: bold;
+  color: white;
 }
 
 a {
@@ -76,23 +80,21 @@ Goals:
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-color: #deb045;
+    border-radius: 15px;
 }
 
 .eInfo {
     text-align: center;
     display: inline-flex;
+    border-color: #deb045;
+    border-radius: 15px;
 }
 
 .pHealthBox { 
-  border: 5px solid black;
   min-width: 150px;
   min-height: 100px;
   display:inline-block;
-  border-radius: 15px;
-  background-color: #3273a3;
-  font-weight: bold;
-  color: white;
-  border-color: #deb045;
 }
 
 .playerHealthElements {
