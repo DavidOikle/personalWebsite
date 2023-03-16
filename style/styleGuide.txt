@@ -14,4 +14,4 @@ Anything clickable: Default colour. On hover, lighten the button in question. On
 
 Gold border: provide a slight shadow behind it to give it definition from the standard background.
 
-Underlines for things that can be highlighter. Eventual goal is to have a popup basicly when you hover over something with an underline, ala Paradox games where it can provide additional information and such.
+Underlines for things that can be highlighter. Eventual goal is to have a tooltip show basicly when you hover over something with an underline, ala Paradox games where it can provide additional information and such.
