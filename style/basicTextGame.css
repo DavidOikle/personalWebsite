@@ -3,9 +3,9 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-   /* background-color: #3273a3; */
-background: rgb(28,96,185);
-background: linear-gradient(0deg, rgba(28,96,185,1) 0%, rgba(0,61,103,1) 100%);
+  /* background-color: #3273a3; */
+  background: rgb(28,96,185);
+  background: linear-gradient(0deg, rgba(28,96,185,1) 0%, rgba(0,61,103,1) 100%);
 }
 
 
@@ -141,8 +141,11 @@ Goals:
 }
 
 #attackButton {
-  max-width: 50px;
-  border: 2px solid black;
+  display: flex;
+  border: 5px solid;
+  border-color: #deb045;
+  border-radius: 15px;
+  padding 5px;
 }
 
 #attackButton:hover {
