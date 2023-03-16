@@ -6,4 +6,10 @@ BASIC TEXT GAME:
   
   Idea is to have a consistent colour palete that I can stick to. IE: Buttons should have X background colour, they should do the following on hover, and the following on being pressed down.
   
-  
+Hex
+3273a3 - Primary blue for backgrounds of everything.
+deb045 - Primary gold for trim around UI elements, buttons, etc.
+
+Anything clickable: Default colour. On hover, lighten the button in question. On click, either remove the lighten effect so it revents back to the default colour, or even darken it further so the background is darker than the other one.
+
+Gold border: provide a slight shadow behind it to give it definition from the standard background.
