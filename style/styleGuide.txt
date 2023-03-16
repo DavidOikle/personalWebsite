@@ -13,3 +13,5 @@ deb045 - Primary gold for trim around UI elements, buttons, etc.
 Anything clickable: Default colour. On hover, lighten the button in question. On click, either remove the lighten effect so it revents back to the default colour, or even darken it further so the background is darker than the other one.
 
 Gold border: provide a slight shadow behind it to give it definition from the standard background.
+
+Underlines for things that can be highlighter. Eventual goal is to have a popup basicly when you hover over something with an underline, ala Paradox games where it can provide additional information and such.
