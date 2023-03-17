@@ -144,6 +144,14 @@ Goals:
   background-color: rgb(34, 119, 230);
 }
 
+#randomEnemyButton {
+  display: inline-flex;
+  border: 5px solid;
+  border-color: #deb045;
+  border-radius: 15px;
+  padding: 5px;
+}
+
 #attackButton:active { 
     background-color: rgb(28,96,185);
 /*  -webkit-box-shadow: inset 0px 0px 2px #c1c1c1;
