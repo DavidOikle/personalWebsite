@@ -122,7 +122,9 @@ Goals:
 }
 
 .playerCombatLogBox, .enemyCombatLogBox {
-  border: 2px solid black;
+  border: 5x solid;
+  border-color: #deb045;
+  border-radius: 15px;
   display:inline-block;
   min-width: 250px;
   min-height: 100px;
@@ -149,9 +151,9 @@ Goals:
 
 #attackButton:active { 
     background-color: rgb(28,96,185);
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+/*  -webkit-box-shadow: inset 0px 0px 2px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 2px #c1c1c1; */
+          box-shadow: inset 0px 0px 2px #c1c1c1;
    outline: none; 
 }
 
