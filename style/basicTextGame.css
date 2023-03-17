@@ -77,10 +77,6 @@ Goals:
   cursor: pointer
 }
 
-
-
-
-
 .pAndEInfo {
   display: flex;
   justify-content: space-between;
@@ -122,10 +118,10 @@ Goals:
 }
 
 .playerCombatLogBox, .enemyCombatLogBox {
-  border: 5x solid;
+  border: 5px solid;
   border-color: #deb045;
   border-radius: 15px;
-  display:inline-block;
+  display: inline-block;
   min-width: 250px;
   min-height: 100px;
   text-align: center;
