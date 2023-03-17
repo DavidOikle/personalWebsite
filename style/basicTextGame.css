@@ -71,6 +71,16 @@ Goals:
 
 */
 
+/* Shared setting for anything clickable to turn the mouse into a hand cursor. */
+
+#attackButton, #warriorButton, #wizardButton, #rogueButton, #randomEnemyButton { 
+  cursor: pointer
+}
+
+
+
+
+
 .pAndEInfo {
   display: flex;
   justify-content: space-between;
