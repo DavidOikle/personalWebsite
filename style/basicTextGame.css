@@ -77,18 +77,11 @@ Goals:
   margin-top: auto;
 }
 
-.pInfo {
+.pInfo .eInfo {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 5px solid;
-    border-color: #deb045;
-    border-radius: 15px;
-}
-
-.eInfo {
-    text-align: center;
-    display: inline-flex;
     border-color: #deb045;
     border-radius: 15px;
 }
@@ -118,15 +111,7 @@ Goals:
   margin-top: auto;
 }
 
-.playerCombatLogBox {
-  border: 2px solid black;
-  display:inline-block;
-  min-width: 250px;
-  min-height: 100px;
-  text-align: center;
-}
-
-.enemyCombatLogBox { 
+.playerCombatLogBox .enemyCombatLogBox {
   border: 2px solid black;
   display:inline-block;
   min-width: 250px;
@@ -149,6 +134,14 @@ Goals:
 }
 
 #attackButton:hover {
-  color: gray;
+  color: rgb(34, 119, 230);
+}
+
+#attackButton:active { 
+    background: rgb(28,96,185);
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none; 
 }
 
