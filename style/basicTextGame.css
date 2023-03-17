@@ -77,7 +77,7 @@ Goals:
   margin-top: auto;
 }
 
-.pInfo .eInfo {
+.pInfo, .eInfo {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,7 +111,7 @@ Goals:
   margin-top: auto;
 }
 
-.playerCombatLogBox .enemyCombatLogBox {
+.playerCombatLogBox, .enemyCombatLogBox {
   border: 2px solid black;
   display:inline-block;
   min-width: 250px;
@@ -134,11 +134,11 @@ Goals:
 }
 
 #attackButton:hover {
-  color: rgb(34, 119, 230);
+  background-color: rgb(34, 119, 230);
 }
 
 #attackButton:active { 
-    background: rgb(28,96,185);
+    background-color: rgb(28,96,185);
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
           box-shadow: inset 0px 0px 5px #c1c1c1;
