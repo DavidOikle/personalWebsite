@@ -151,7 +151,7 @@ Goals:
 }
 
 #attackButton:active { 
-    background-color: rgb(00,00,000);
+    background-color: rgb(00,00,00);
   /*   -webkit-box-shadow: inset 0px 0px 2px #000000;
      -moz-box-shadow: inset 0px 0px 2px #000000;  */
       box-shadow: inset 0px 0px 2px #000000;
