@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-a:link {
+/* a:link {
 
 }
 a:visited {
@@ -33,18 +33,24 @@ a:hover {
 a:active {
   
 }
-
+*/
 .header {
   display: flex;
   justify-content: space-between
 }
 
 .navLeft {
-  border: 1px solid black;
+  border: 5px solid #deb045;
+  display: inline-flex;
+  border-radius: 15px;
+  padding: 7px;
 }
 
 .navRight {
-  border: 1px solid black;
+  border: 5px solid #deb045;
+  display: inline-flex;
+  border-radius: 15px;
+  padding: 7px;
 }
 
 .navLink {
