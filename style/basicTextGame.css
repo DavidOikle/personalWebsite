@@ -151,8 +151,8 @@ Goals:
 }
 
 #attackButton:active { 
-    background: rgb(28,96,185);
-    box-shadow: inset 0 0 10px #000000;
+    background: rgb(9, 33, 64);
+    box-shadow: inset 0 0 5px #000000;
    outline: none;
 }
 
