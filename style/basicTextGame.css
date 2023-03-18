@@ -1,4 +1,9 @@
 /* Universal modifiers; copied from Index.css. */
+/* MARCH 17th TO DO: Tweak button classes and such so everything that has a hover/active/etc can reference a single class. As it stands I need to assign each
+button's custom class to the active/hover/etc states. Goal is to have a button in the HTML side have 2 classes. 1 for refernceing it in JS and one for the CSS.
+Otherwise, in the CSS you'd have to assign every single button to the hover/active states and such and that's obviously not gonna work!
+*/
+
 html, body {
   height: 100%;
   display: flex;
