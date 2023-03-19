@@ -1,7 +1,11 @@
-/* Attacking an enemy/enemy attacking the player at the same time. */
+// VARIABLES
+
+// Combat variables
 
 var playerDamageRoll = 0;
 var enemyDamageRoll = 0;
+
+//Player info variables
 
 var playerHealth = null;
 var playerProfession = '';
@@ -10,11 +14,53 @@ var playerExperience = null;
 var playerMaxExperience = null;
 var playerGold = 0;
 
+//Enemy info variables
 
+let enemyHealth = null;
+let enemyProfession = '';
+
+//DOM HTML classes and ID's imported into JS
 
 const randomNumAttack = document.getElementById("attackButton");
+const warriorButton = document.getElementById("warriorButton");
+const rogueButton = document.getElementById("rogueButton");
+const wizardButton = document.getElementById("wizardButton");
+const playerHealthDisplay = document.getElementById("pHealth");
+const playerProfessionDisplay = document.getElementById("pProfession");
+const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
+const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
+const playerExperienceDisplay = document.getElementById("pExperience");
+const playerGoldDisplay = document.getElementById("pGold");
+const randomEnemyButton = document.getElementById("randomEnemyButton");
+const enemyHealthDisplay = document.getElementById("eHealth")
+const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
+const enemyProfessionDisplay = document.getElementById("eProfession")
 
-//  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll()} damage.`
+//DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
+//but I'm leaving these here for now. 
+
+playerHealthDisplay.innerHTML = playerHealth;
+playerProfessionDisplay.innerHTML = playerProfession;
+playerMaxHealthDisplay.innerHTML = playerMaxHealth;
+playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
+playerGoldDisplay.innerHTML = playerGold;
+enemyHealthDisplay.innerHTML = enemyHealth;
+enemyProfessionDisplay.innerHTML = enemyProfession;
+
+
+
+
+
+//FUNCTIONS
+
+//Combat functions
+
+function combat(){
+    enemyAttack();
+    playerAttack();
+   
+randomNumAttack.addEventListener("click", combat);
+
 
 
 let enemyAttack = () => {
@@ -33,7 +79,7 @@ let enemyAttack = () => {
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
 
-let handleAttack = () => {
+let playerAttack = () => {
   playerDamageRoll = Math.floor(Math.random() * 10  ) + 1;
   enemyHealth = enemyHealth - playerDamageRoll;
   enemyHealthDisplay.innerHTML = enemyHealth;
@@ -53,35 +99,13 @@ let handleAttack = () => {
     playerHealth = playerMaxHealth
   }
 }
- 
  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
- 
 }
 
-// Condense this by having a parent function surround the handleAattack and enemyAttack function, and then invoke that single function. Maybe call it just combat or something?
-randomNumAttack.addEventListener("click", handleAttack);
-randomNumAttack.addEventListener("click", enemyAttack);
+//randomNumAttack.addEventListener("click", playerAttack);
+//randomNumAttack.addEventListener("click", enemyAttack);
 
 // Player Profession choice - updates playerProfession and playerHealth.
-
-const warriorButton = document.getElementById("warriorButton");
-const rogueButton = document.getElementById("rogueButton");
-const wizardButton = document.getElementById("wizardButton");
-const playerHealthDisplay = document.getElementById("pHealth");
-const playerProfessionDisplay = document.getElementById("pProfession");
-const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
-const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
-const playerExperienceDisplay = document.getElementById("pExperience");
-const playerGoldDisplay = document.getElementById("pGold");
-
-
-
-playerHealthDisplay.innerHTML = playerHealth;
-playerProfessionDisplay.innerHTML = playerProfession;
-playerMaxHealthDisplay.innerHTML = playerMaxHealth;
-playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
-playerGoldDisplay.innerHTML = playerGold;
-
 
 const playerChoiceWarrior = () => {
   playerProfession = "Warrior";
@@ -125,23 +149,6 @@ warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
 
-/* Random Enemy Generator. Like the class choice generator, it at the moment can be clicked to give a new option each time. Eventually need to add in a part where it hides the button upon being clicked, and then later on, shows the button once the enemy's health is 0 or lower. */
-
-/* One future change I'd like to have for the player profession and random enemy is changing how they update the Profession and Health displays in the HTML. In the middle term, having an array contain all the different options, and then having the update occur in a higher level function would be good. At the moment, anytime I want to change the health for example, I have to include that in each function, and that seems tedious? There must be a more efficent way of doing that. Having a top level fucntion do that, with a few empty values that are filled with health, attack, or other items? 
-
-UPDATE: Dec 7th 2022: Not 5 minutes later do I start the factory functions section in code acadmey. DO THIS INSTEAD CAUSE OH GOD IT WILL MAKE IT SO MUCH EASIER AND CUT DOWN ON A TON OF CODE.*/
-
-const randomEnemyButton = document.getElementById("randomEnemyButton");
-const enemyHealthDisplay = document.getElementById("eHealth")
-const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
-const enemyProfessionDisplay = document.getElementById("eProfession")
-
-let enemyHealth = null;
-let enemyProfession = '';
-
-enemyHealthDisplay.innerHTML = enemyHealth;
-enemyProfessionDisplay.innerHTML = enemyProfession;
-
 
 
 const randomEnemyFunction = () => {
@@ -167,6 +174,21 @@ const randomEnemyFunction = () => {
     enemyProfessionDisplay.innerHTML = enemyProfession;
 }
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 Factory functions inital setup.
