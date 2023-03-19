@@ -187,20 +187,6 @@ const newEnemy = enemyFactory('Bandit', 8, 8)
 
 
 
-
-//Level up, XP reset, and max XP increase function. 
-//PseudoCoded for now
-
-/*
-const levelUp = () => {
-  if (playerXP == playerMaxXp){
-    playerXP = 0;
-    playerMaxXP = playerMaxXP * 2
-    playerHealth = playerMaxHealth
-    playerMaxHeath = playerMaxHealth * 1.1
-  }
-}
-*/
 /*Pseduo code/overall logic for functions:
 
 Until I can figure out a way to just run/constantly loop certain functions until specific criteria are met (EX: player HP reaches 0, so restart the game), the following idea may be the best option:
@@ -246,6 +232,26 @@ Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt
 
 */
 
+/* March 18th 2023
+Rewriting functions and such, and building news ones. Goal is to instead invoke a bunch of functions when certan events happen, as opposed to those events being the functions themselves.
 
+XP CHECK
+Check player XP anytime it needs to be invoked. IE: A roll in combat (maybe end of combat?)a quest being completed, etc etc.
+
+let playerExperienceCheck = () => {
+   if (playerExperience >= playerMaxExperience) {
+      playerExperience = 0;
+      playerLevel++;
+      playerMaxExperience = 10 + playerLevel * 2;
+      playerMaxHealth = playerMaxHealth + 1;
+      playerHealth = playerMaxHealth;
+   }
+}
+
+
+
+
+
+*/
 
 
