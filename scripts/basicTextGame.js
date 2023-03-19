@@ -58,6 +58,7 @@ enemyProfessionDisplay.innerHTML = enemyProfession;
 function combat(){
     enemyAttack();
     playerAttack();
+}
    
 randomNumAttack.addEventListener("click", combat);
 
