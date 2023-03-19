@@ -205,11 +205,9 @@ function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
 const newEnemy = enemyFactory('Bandit', 8, 8)
 
 
-*/
 
 
-
-/*Pseduo code/overall logic for functions:
+Pseduo code/overall logic for functions:
 
 Until I can figure out a way to just run/constantly loop certain functions until specific criteria are met (EX: player HP reaches 0, so restart the game), the following idea may be the best option:
 Seperate out any and all functions.
@@ -232,10 +230,7 @@ startingFunction(gameplay or something) = () => {
 }
 One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
 
-*/
 
-
-/*
 Goals established dec 24th 2022. Not to all be done on the 24th, but it gives a clear list of goals to try and tackle. Does not need to be done in order, expect for obvious ones. Kind of need to have a way to acquire XP in order to level up.
 DONE DEC 31st 2022--- 1: reset health/enemy names to null/"" when the enemies health goes below 0. 
 DONE DEC 31st 2022--- 2: Hide the random enemy button once it is clicked.
@@ -252,9 +247,8 @@ DONE MARCH 4th 2023--- 8: Recover the player's health, to start when defeating a
 
 Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt to eachother. 
 
-*/
 
-/* March 18th 2023
+ March 18th 2023
 Rewriting functions and such, and building news ones. Goal is to instead invoke a bunch of functions when certan events happen, as opposed to those events being the functions themselves.
 
 XP CHECK
@@ -269,11 +263,4 @@ let playerExperienceCheck = () => {
       playerHealth = playerMaxHealth;
    }
 }
-
-
-
-
-
 */
-
-
