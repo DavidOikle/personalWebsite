@@ -1,9 +1,3 @@
-/* Universal modifiers; copied from Index.css. */
-/* MARCH 17th TO DO: Tweak button classes and such so everything that has a hover/active/etc can reference a single class. As it stands I need to assign each
-button's custom class to the active/hover/etc states. Goal is to have a button in the HTML side have 2 classes. 1 for refernceing it in JS and one for the CSS.
-Otherwise, in the CSS you'd have to assign every single button to the hover/active states and such and that's obviously not gonna work!
-*/
-
 html, body {
   height: 100%;
   display: flex;
@@ -12,7 +6,6 @@ html, body {
   background: rgb(28,96,185);
   background: linear-gradient(0deg, rgba(28,96,185,1) 0%, rgba(0,61,103,1) 100%);
 }
-
 
 * {
   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
@@ -24,42 +17,10 @@ a {
   text-decoration: none;
 }
 
-/* a:link {
-
-}
-a:visited {
-
-}
-
-a:hover {
-  color: gray;
-}
-
-a:active {
-  
-}
-*/
 .header {
-  display: flex;
-  justify-content: space-between
-}
-
-.navLeft {
-  border: 5px solid #deb045;
   display: inline-flex;
-  border-radius: 15px;
-  padding: 7px;
-}
-
-.navRight {
-  border: 5px solid #deb045;
-  display: inline-flex;
-  border-radius: 15px;
-  padding: 7px;
-}
-
-.navLink {
-  margin: 0px 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer {
@@ -76,18 +37,8 @@ a:active {
   padding: 0px 50px;
 }
 
-/* Modifiers for basic Text Game. 
-Goals: 
-      Give a minimum value for the boxes for player/enemy health/name displays so they dont shrink and stretch when empty vs containing text. 
-
-*/
-
-/* Shared setting for anything clickable to turn the mouse into a hand cursor. */
-
-
-
-#attackButton, #warriorButton, #wizardButton, #rogueButton, #randomEnemyButton { 
-  cursor: pointer
+.randomEnemyZone {
+  display: inline-flex;
 }
 
 .pAndEInfo {
@@ -105,10 +56,11 @@ Goals:
     border-radius: 15px;
 }
 
-.pHealthBox { 
-  min-width: 150px;
-  min-height: 100px;
+.elementInsideOfDisplay { 
+  min-width: 100px;
+  min-height: 50px;
   display:inline-block;
+
 }
 
 .playerHealthElements {
@@ -128,7 +80,7 @@ Goals:
   margin-top: auto;
 }
 
-.playerCombatLogBox, .enemyCombatLogBox {
+.combatLogs {
   display: inline-block;
   border: 5px solid #deb045;
   border-radius: 15px;
@@ -143,8 +95,9 @@ Goals:
   border: 0px;  
 }
 
+.buttons { 
 
-#randomEnemyButton, #warriorButton, #wizardButton, #rogueButton, #attackButton {
+  cursor: pointer
   display: inline-flex;
   border: 5px solid;
   border-color: #deb045;
@@ -152,32 +105,15 @@ Goals:
   padding: 7px;
 }
 
-#attackButton:hover {
+.buttons:hover {
   background-color: rgb(34, 119, 230);
 }
 
-#attackButton:active { 
-    background: rgb(0,61,103);
-    box-shadow: inset 0 0 5px #000000;
+.buttons:active {
+   background: rgb(0,61,103);
+    box-shadow: inset 0 0 15px #000000;
    outline: none;
 }
 
-
-
-
-
-
-.itmesWithBorder { 
-  display: inline-flex;
-  border: 5px solid;
-  border-color: #deb045;
-  border-radius: 15px;
-  padding: 7px;
+.boxTitles {
 }
-
-.itemsWithoutBorder {
-
-}
-
-
-
