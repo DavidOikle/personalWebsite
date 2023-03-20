@@ -21,20 +21,20 @@ let enemyProfession = '';
 
 //DOM HTML classes and ID's imported into JS
 
-const randomNumAttack = document.getElementById("attackButton");
-const warriorButton = document.getElementById("warriorButton");
-const rogueButton = document.getElementById("rogueButton");
-const wizardButton = document.getElementById("wizardButton");
-const playerHealthDisplay = document.getElementById("pHealth");
-const playerProfessionDisplay = document.getElementById("pProfession");
-const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
-const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
-const playerExperienceDisplay = document.getElementById("pExperience");
-const playerGoldDisplay = document.getElementById("pGold");
-const randomEnemyButton = document.getElementById("randomEnemyButton");
-const enemyHealthDisplay = document.getElementById("eHealth")
-const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
-const enemyProfessionDisplay = document.getElementById("eProfession")
+const randomNumAttack = document.getElementsByClassName("attackButton");
+const warriorButton = document.getElementsByClassName("warriorButton");
+const rogueButton = document.getElementsByClassName("rogueButton");
+const wizardButton = document.getElementsByClassName("wizardButton");
+const playerHealthDisplay = document.getElementsByClassName("pHealth");
+const playerProfessionDisplay = document.getElementsByClassName("pProfession");
+const playerMaxHealthDisplay = document.getElementsByClassName("pMaxHealth");
+const playerMaxExperienceDisplay = document.getElementsByClassName("pMaxExperience");
+const playerExperienceDisplay = document.getElementsByClassName("pExperience");
+const playerGoldDisplay = document.getElementsByClassName("pGold");
+const randomEnemyButton = document.getElementsByClassName("randomEnemyButton");
+const enemyHealthDisplay = document.getElementsByClassName("eHealth")
+const enemyMaxHealthDisplay = document.getElementsByClassName("eMaxHealth")
+const enemyProfessionDisplay = document.getElementsByClassName("eProfession")
 
 //DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
 //but I'm leaving these here for now. 
@@ -95,7 +95,7 @@ let playerAttack = () => {
   enemyProfession = '';
   enemyHealthDisplay.innerHTML = enemyHealth;
   enemyProfessionDisplay.innerHTML = enemyProfession;
-   document.getElementById("randomEnemyButton").style.visibility = "visible";
+   document.getElementsByClassName("randomEnemyButton").style.visibility = "visible";
   playerExperience++;
    playerExperienceDisplay.innerHTML = playerExperience;
 
@@ -116,9 +116,9 @@ const playerChoiceWarrior = () => {
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementById("warriorButton").style.visibility = "hidden";
-  document.getElementById("rogueButton").style.visibility = "hidden";
-  document.getElementById("wizardButton").style.visibility = "hidden";
+  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
+  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
+  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceRogue = () => {
@@ -129,9 +129,9 @@ const playerChoiceRogue = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementById("warriorButton").style.visibility = "hidden";
-  document.getElementById("rogueButton").style.visibility = "hidden";
-  document.getElementById("wizardButton").style.visibility = "hidden";
+  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
+  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
+  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceWizard = () => {
@@ -142,9 +142,9 @@ const playerChoiceWizard = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementById("warriorButton").style.visibility = "hidden";
-  document.getElementById("rogueButton").style.visibility = "hidden";
-  document.getElementById("wizardButton").style.visibility = "hidden";
+  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
+  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
+  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
 };
 
 
@@ -168,7 +168,7 @@ const randomEnemyFunction = () => {
             enemyHealth = "6";
             enemyMaxHealth = "6";
           }
-    document.getElementById("randomEnemyButton").style.visibility = "hidden";
+    document.getElementsByClassName("randomEnemyButton").style.visibility = "hidden";
     enemyHealthDisplay.innerHTML = enemyHealth;
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
