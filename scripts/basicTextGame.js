@@ -7,11 +7,11 @@ var enemyDamageRoll = 0;
 
 //Player info variables
 
-var playerHealth = 0;
+var playerHealth = null;
 var playerProfession = '';
-var playerMaxHealth = 0;
-var playerExperience = 0;
-var playerMaxExperience = 0;
+var playerMaxHealth = null;
+var playerExperience = null;
+var playerMaxExperience = null;
 var playerGold = 0;
 
 //Enemy info variables
@@ -32,9 +32,9 @@ const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
 const playerExperienceDisplay = document.getElementById("pExperience");
 const playerGoldDisplay = document.getElementById("pGold");
 const randomEnemyButton = document.getElementById("randomEnemyButton");
-const enemyHealthDisplay = document.getElementById("eHealth");
-const enemyMaxHealthDisplay = document.getElementById("eMaxHealth");
-const enemyProfessionDisplay = document.getElementById("eProfession");
+const enemyHealthDisplay = document.getElementById("eHealth")
+const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
+const enemyProfessionDisplay = document.getElementById("eProfession")
 
 //DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
 //but I'm leaving these here for now. 
@@ -95,7 +95,7 @@ let playerAttack = () => {
   enemyProfession = '';
   enemyHealthDisplay.innerHTML = enemyHealth;
   enemyProfessionDisplay.innerHTML = enemyProfession;
-   document.getElementsByClassName("randomEnemyButton").style.visibility = "visible";
+   document.getElementById("randomEnemyButton").style.visibility = "visible";
   playerExperience++;
    playerExperienceDisplay.innerHTML = playerExperience;
 
@@ -116,9 +116,9 @@ const playerChoiceWarrior = () => {
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
-  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
-  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceRogue = () => {
@@ -129,9 +129,9 @@ const playerChoiceRogue = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
-  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
-  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 const playerChoiceWizard = () => {
@@ -142,9 +142,9 @@ const playerChoiceWizard = () => {
   playerHealthDisplay.innerHTML = playerHealth;
    playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  document.getElementsByClassName("warriorButton").style.visibility = "hidden";
-  document.getElementsByClassName("rogueButton").style.visibility = "hidden";
-  document.getElementsByClassName("wizardButton").style.visibility = "hidden";
+  document.getElementById("warriorButton").style.visibility = "hidden";
+  document.getElementById("rogueButton").style.visibility = "hidden";
+  document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
 
@@ -168,7 +168,7 @@ const randomEnemyFunction = () => {
             enemyHealth = "6";
             enemyMaxHealth = "6";
           }
-    document.getElementsByClassName("randomEnemyButton").style.visibility = "hidden";
+    document.getElementById("randomEnemyButton").style.visibility = "hidden";
     enemyHealthDisplay.innerHTML = enemyHealth;
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
@@ -197,7 +197,6 @@ randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
 /*
 Factory functions inital setup.
-
 function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
   return {
     enemyProfession,
@@ -205,15 +204,8 @@ function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
     enemyMaxHealth,
   }
 }
-
-
 const newEnemy = enemyFactory('Bandit', 8, 8)
-
-
-
-
 Pseduo code/overall logic for functions:
-
 Until I can figure out a way to just run/constantly loop certain functions until specific criteria are met (EX: player HP reaches 0, so restart the game), the following idea may be the best option:
 Seperate out any and all functions.
 For every round of combat, run a parent function that also calls and runs all childern. 
@@ -222,20 +214,15 @@ Combat rolls for player and enemy.
 Player health
 Enemy health/combat end
 Player XP
-
 Could subdivide these into the following as most only need to be called at specific times:
 During encounter
 Post encounter
-
 The idea is the following:
-
 startingFunction(gameplay or something) = () => {
    if in combat (can setup a variable that flips a boolean from false to true and then checks) then run the following group of functions: combat rolls and such
    if enemy health reaches 0, run the following: xp gain, gold gain, etc. 
 }
 One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
-
-
 Goals established dec 24th 2022. Not to all be done on the 24th, but it gives a clear list of goals to try and tackle. Does not need to be done in order, expect for obvious ones. Kind of need to have a way to acquire XP in order to level up.
 DONE DEC 31st 2022--- 1: reset health/enemy names to null/"" when the enemies health goes below 0. 
 DONE DEC 31st 2022--- 2: Hide the random enemy button once it is clicked.
@@ -249,16 +236,11 @@ DONE MARCH 4th 2023--- 8: Recover the player's health, to start when defeating a
 10: Use of gold system. Buying healing at a shop, eventually items or something like that.
 11: Additional inputs for the player, in particular a name + pronouns. Set the pronouns up in some sort of variable that can later be referenced like ${subjectPronoun} ${objectPronoun} (they/them respectivley in this case).
 12: Rewrite the random enemy systme to instead use factory functions, or something similar. The Code academy tutorials for that seemed like a much better way to have a list of enemies. Overall need to start using more arrays and such instead of having longer form variables, as the former will help cut down on code.
-
 Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt to eachother. 
-
-
  March 18th 2023
 Rewriting functions and such, and building news ones. Goal is to instead invoke a bunch of functions when certan events happen, as opposed to those events being the functions themselves.
-
 XP CHECK
 Check player XP anytime it needs to be invoked. IE: A roll in combat (maybe end of combat?)a quest being completed, etc etc.
-
 let playerExperienceCheck = () => {
    if (playerExperience >= playerMaxExperience) {
       playerExperience = 0;
