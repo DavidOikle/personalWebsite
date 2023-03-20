@@ -21,20 +21,20 @@ let enemyProfession = '';
 
 //DOM HTML classes and ID's imported into JS
 
-const randomNumAttack = document.getElementsByClassName("attackButton");
-const warriorButton = document.getElementsByClassName("warriorButton");
-const rogueButton = document.getElementsByClassName("rogueButton");
-const wizardButton = document.getElementsByClassName("wizardButton");
-const playerHealthDisplay = document.getElementsByClassName("pHealth");
-const playerProfessionDisplay = document.getElementsByClassName("pProfession");
-const playerMaxHealthDisplay = document.getElementsByClassName("pMaxHealth");
-const playerMaxExperienceDisplay = document.getElementsByClassName("pMaxExperience");
-const playerExperienceDisplay = document.getElementsByClassName("pExperience");
-const playerGoldDisplay = document.getElementsByClassName("pGold");
-const randomEnemyButton = document.getElementsByClassName("randomEnemyButton");
-const enemyHealthDisplay = document.getElementsByClassName("eHealth")
-const enemyMaxHealthDisplay = document.getElementsByClassName("eMaxHealth")
-const enemyProfessionDisplay = document.getElementsByClassName("eProfession")
+const randomNumAttack = document.getElementsByClassName("attackButton")[0];
+const warriorButton = document.getElementsByClassName("warriorButton")[0];
+const rogueButton = document.getElementsByClassName("rogueButton")[0];
+const wizardButton = document.getElementsByClassName("wizardButton")[0];
+const playerHealthDisplay = document.getElementsByClassName("pHealth")[0];
+const playerProfessionDisplay = document.getElementsByClassName("pProfession")[0];
+const playerMaxHealthDisplay = document.getElementsByClassName("pMaxHealth")[0];
+const playerMaxExperienceDisplay = document.getElementsByClassName("pMaxExperience")[0];
+const playerExperienceDisplay = document.getElementsByClassName("pExperience")[0];
+const playerGoldDisplay = document.getElementsByClassName("pGold")[0];
+const randomEnemyButton = document.getElementsByClassName("randomEnemyButton")[0];
+const enemyHealthDisplay = document.getElementsByClassName("eHealth")[0];
+const enemyMaxHealthDisplay = document.getElementsByClassName("eMaxHealth")[0];
+const enemyProfessionDisplay = document.getElementsByClassName("eProfession")[0];
 
 //DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
 //but I'm leaving these here for now. 
@@ -176,7 +176,7 @@ const randomEnemyFunction = () => {
 
 
 //Event Listeners
-randomNumAttack.addEventListener("click", combat);
+randomNumAttack[0].addEventListener("click", combat);
 warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
