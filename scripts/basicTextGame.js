@@ -47,7 +47,12 @@ playerGoldDisplay.innerHTML = playerGold;
 enemyHealthDisplay.innerHTML = enemyHealth;
 enemyProfessionDisplay.innerHTML = enemyProfession;
 
-
+//Event Listeners
+randomNumAttack.addEventListener("click", combat);
+warriorButton.addEventListener("click", playerChoiceWarrior);
+rogueButton.addEventListener("click", playerChoiceRogue);
+wizardButton.addEventListener("click", playerChoiceWizard);
+randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
 
 
@@ -55,14 +60,16 @@ enemyProfessionDisplay.innerHTML = enemyProfession;
 
 //Combat functions
 
+//Parent combat function. Build the individual functions elsehwere and then invoke them via this function.
 function combat(){
     enemyAttack();
     playerAttack();
 }
    
-randomNumAttack.addEventListener("click", combat);
 
+// Individual combat functions
 
+//Enemy attacking function.
 
 let enemyAttack = () => {
    enemyDamageRoll = Math.floor(Math.random() * 4  ) + 1;
@@ -79,6 +86,8 @@ let enemyAttack = () => {
 }
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
+
+//Player attacking function.
 
 let playerAttack = () => {
   playerDamageRoll = Math.floor(Math.random() * 10  ) + 1;
@@ -103,10 +112,7 @@ let playerAttack = () => {
  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
 }
 
-//randomNumAttack.addEventListener("click", playerAttack);
-//randomNumAttack.addEventListener("click", enemyAttack);
-
-// Player Profession choice - updates playerProfession and playerHealth.
+//Player Profession choice - updates playerProfession and playerHealth.
 
 const playerChoiceWarrior = () => {
   playerProfession = "Warrior";
@@ -146,11 +152,9 @@ const playerChoiceWizard = () => {
   document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
-warriorButton.addEventListener("click", playerChoiceWarrior);
-rogueButton.addEventListener("click", playerChoiceRogue);
-wizardButton.addEventListener("click", playerChoiceWizard);
 
 
+//Creating an enemy to fight via the random enemy button.
 
 const randomEnemyFunction = () => {
       const randomEnemyNumber = Math.floor(Math.random() * 3) 
@@ -174,7 +178,7 @@ const randomEnemyFunction = () => {
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
 }
-randomEnemyButton.addEventListener("click", randomEnemyFunction);
+
 
 
 
