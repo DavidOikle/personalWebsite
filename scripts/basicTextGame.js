@@ -1,26 +1,19 @@
-// VARIABLES
-
-// Combat variables
+//Variables
 
 var playerDamageRoll = 0;
 var enemyDamageRoll = 0;
-
-//Player info variables
-
-var playerHealth = null;
+var playerHealth = 0;
 var playerProfession = '';
-var playerMaxHealth = null;
-var playerExperience = null;
-var playerMaxExperience = null;
+var playerMaxHealth = 0;
+var playerExperience = 0;
+var playerMaxExperience = 10;
 var playerGold = 0;
-
-//Enemy info variables
-
-let enemyHealth = null;
+let enemyHealth = 0;
 let enemyProfession = '';
+let playerLevel = 1;
 
-//DOM HTML classes and ID's imported into JS
 
+//DOM imports from HTML into JS
 const randomNumAttack = document.getElementById("attackButton");
 const warriorButton = document.getElementById("warriorButton");
 const rogueButton = document.getElementById("rogueButton");
@@ -35,36 +28,22 @@ const randomEnemyButton = document.getElementById("randomEnemyButton");
 const enemyHealthDisplay = document.getElementById("eHealth")
 const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
 const enemyProfessionDisplay = document.getElementById("eProfession")
-
-//DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
-//but I'm leaving these here for now. 
-
-playerHealthDisplay.innerHTML = playerHealth;
-playerProfessionDisplay.innerHTML = playerProfession;
-playerMaxHealthDisplay.innerHTML = playerMaxHealth;
-playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
-playerGoldDisplay.innerHTML = playerGold;
-enemyHealthDisplay.innerHTML = enemyHealth;
-enemyProfessionDisplay.innerHTML = enemyProfession;
+const playerLevelDisplay = document.getElementById("pLevel")
 
 
 
 
 
-//FUNCTIONS
+// Combat Functions
 
-//Combat functions
-
-//Parent combat function. Build the individual functions elsehwere and then invoke them via this function.
-function combat(){
-    enemyAttack();
-    playerAttack();
+// Parent combat function. Write the variables elsewhere, and then add to this. 
+function combat() {
+  handleAttack();
+  enemyAttack();
+  playerExperienceCheck()
 }
-   
 
-// Individual combat functions
-
-//Enemy attacking function.
+//Individual combat functions
 
 let enemyAttack = () => {
    enemyDamageRoll = Math.floor(Math.random() * 4  ) + 1;
@@ -82,9 +61,7 @@ let enemyAttack = () => {
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
 
-//Player attacking function.
-
-let playerAttack = () => {
+let handleAttack = () => {
   playerDamageRoll = Math.floor(Math.random() * 10  ) + 1;
   enemyHealth = enemyHealth - playerDamageRoll;
   enemyHealthDisplay.innerHTML = enemyHealth;
@@ -99,7 +76,7 @@ let playerAttack = () => {
   playerExperience++;
    playerExperienceDisplay.innerHTML = playerExperience;
 
-  playerHealth = playerHealth + playerMaxHealth * 0.5;
+  playerHealth = playerHealth + playerMaxHealth * Math.round(0.5);
   if (playerHealth > playerMaxHealth) {
     playerHealth = playerMaxHealth
   }
@@ -107,7 +84,25 @@ let playerAttack = () => {
  playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
 }
 
-//Player Profession choice - updates playerProfession and playerHealth.
+
+let playerExperienceCheck = () => {
+   if (playerExperience >= playerMaxExperience) {
+      playerExperience = 0;
+      playerLevel++;
+      playerMaxHealth++;
+      playerMaxExperience = (playerMaxExperience + playerLevel) * 2;
+      playerHealth = playerMaxHealth;
+
+      playerExperienceDisplay.innerHTML = 0;
+      playerMaxExperienceDisplay.innerHTML = playerMaxExperience;
+      playerMaxHealthDisplay.innerHTML = playerMaxHealth;
+      playerHealthDisplay.innerHTML = playerMaxHealth;
+      playerLevelDisplay.innerHTML = playerLevel;
+   }
+}
+
+
+//Player choice functions
 
 const playerChoiceWarrior = () => {
   playerProfession = "Warrior";
@@ -147,9 +142,14 @@ const playerChoiceWizard = () => {
   document.getElementById("wizardButton").style.visibility = "hidden";
 };
 
+//Event Listeners
 
+warriorButton.addEventListener("click", playerChoiceWarrior);
+rogueButton.addEventListener("click", playerChoiceRogue);
+wizardButton.addEventListener("click", playerChoiceWizard);
+randomNumAttack.addEventListener("click", combat);
 
-//Creating an enemy to fight via the random enemy button.
+//Generate enemy function
 
 const randomEnemyFunction = () => {
       const randomEnemyNumber = Math.floor(Math.random() * 3) 
@@ -173,30 +173,14 @@ const randomEnemyFunction = () => {
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
 }
-
-
-//Event Listeners
-randomNumAttack.addEventListener("click", combat);
-warriorButton.addEventListener("click", playerChoiceWarrior);
-rogueButton.addEventListener("click", playerChoiceRogue);
-wizardButton.addEventListener("click", playerChoiceWizard);
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 /*
 Factory functions inital setup.
+
 function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
   return {
     enemyProfession,
@@ -204,50 +188,10 @@ function enemyFactory(enemyProfession, enemyHealth, enemyMaxHealth){
     enemyMaxHealth,
   }
 }
+
+
 const newEnemy = enemyFactory('Bandit', 8, 8)
-Pseduo code/overall logic for functions:
-Until I can figure out a way to just run/constantly loop certain functions until specific criteria are met (EX: player HP reaches 0, so restart the game), the following idea may be the best option:
-Seperate out any and all functions.
-For every round of combat, run a parent function that also calls and runs all childern. 
-Childern include: 
-Combat rolls for player and enemy.
-Player health
-Enemy health/combat end
-Player XP
-Could subdivide these into the following as most only need to be called at specific times:
-During encounter
-Post encounter
-The idea is the following:
-startingFunction(gameplay or something) = () => {
-   if in combat (can setup a variable that flips a boolean from false to true and then checks) then run the following group of functions: combat rolls and such
-   if enemy health reaches 0, run the following: xp gain, gold gain, etc. 
-}
-One tricky part for this is if the code is constantly searching for if the enemy reaches 0 hp, outside of combat the enemy can't be resting at 0. Make sure to keep them at null outside of combat.
-Goals established dec 24th 2022. Not to all be done on the 24th, but it gives a clear list of goals to try and tackle. Does not need to be done in order, expect for obvious ones. Kind of need to have a way to acquire XP in order to level up.
-DONE DEC 31st 2022--- 1: reset health/enemy names to null/"" when the enemies health goes below 0. 
-DONE DEC 31st 2022--- 2: Hide the random enemy button once it is clicked.
-DONE DEC 31st 2022--- 3: Unhide the random enemy button once an enemy is defeated.
-4: Hide the player class choice buttons when one is clicked.
-DONE FEB 23rd 2023--- 5: Give the player a basic XP counter that increments by +1 when defeating an enemy.
-6: Give the player a basic gold couunter that increments by a semi random value when defeating an enemy. Maybe rolls a number and either muliply it or add to is based on the type of enemy defeated.
-7: Establish a game over/try again screen when the player is defeated.
-DONE MARCH 4th 2023--- 8: Recover the player's health, to start when defeating an enemy. 
-9: Establish a level up system for the player that makes the stronger, and recovers health when leveling. Also have it reset the XP counter, and raise said counter. 
-10: Use of gold system. Buying healing at a shop, eventually items or something like that.
-11: Additional inputs for the player, in particular a name + pronouns. Set the pronouns up in some sort of variable that can later be referenced like ${subjectPronoun} ${objectPronoun} (they/them respectivley in this case).
-12: Rewrite the random enemy systme to instead use factory functions, or something similar. The Code academy tutorials for that seemed like a much better way to have a list of enemies. Overall need to start using more arrays and such instead of having longer form variables, as the former will help cut down on code.
-Added Jan 2nd 2022: Combat log that shows the damage the player, and enemy dealt to eachother. 
- March 18th 2023
-Rewriting functions and such, and building news ones. Goal is to instead invoke a bunch of functions when certan events happen, as opposed to those events being the functions themselves.
-XP CHECK
-Check player XP anytime it needs to be invoked. IE: A roll in combat (maybe end of combat?)a quest being completed, etc etc.
-let playerExperienceCheck = () => {
-   if (playerExperience >= playerMaxExperience) {
-      playerExperience = 0;
-      playerLevel++;
-      playerMaxExperience = 10 + playerLevel * 2;
-      playerMaxHealth = playerMaxHealth + 1;
-      playerHealth = playerMaxHealth;
-   }
-}
+
+
 */
+
