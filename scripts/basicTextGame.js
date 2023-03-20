@@ -176,7 +176,7 @@ const randomEnemyFunction = () => {
 
 
 //Event Listeners
-randomNumAttack.addEventListener("click", playerChoiceWarrior);
+randomNumAttack.addEventListener("click", combat);
 warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
