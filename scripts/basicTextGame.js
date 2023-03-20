@@ -7,11 +7,11 @@ var enemyDamageRoll = 0;
 
 //Player info variables
 
-var playerHealth = null;
+var playerHealth = 0;
 var playerProfession = '';
-var playerMaxHealth = null;
-var playerExperience = null;
-var playerMaxExperience = null;
+var playerMaxHealth = 0;
+var playerExperience = 0;
+var playerMaxExperience = 0;
 var playerGold = 0;
 
 //Enemy info variables
