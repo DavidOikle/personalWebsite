@@ -56,7 +56,7 @@ enemyProfessionDisplay.innerHTML = enemyProfession;
 //Combat functions
 
 //Parent combat function. Build the individual functions elsehwere and then invoke them via this function.
-function combat() {
+function combat(){
     enemyAttack();
     playerAttack();
 }
