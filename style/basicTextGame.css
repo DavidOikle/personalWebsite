@@ -143,24 +143,17 @@ Goals:
   border: 0px;  
 }
 
-#attackButton {
-  display: inline-flex;
-  border: 5px solid;
-  border-color: #deb045;
-  border-radius: 15px;
-  padding: 5px;
-}
 
-#attackButton:hover {
-  background-color: rgb(34, 119, 230);
-}
-
-#randomEnemyButton, .warriorButton, .wizardButton, .rogueButton {
+#randomEnemyButton, #warriorButton, #wizardButton, #rogueButton, #attackButton {
   display: inline-flex;
   border: 5px solid;
   border-color: #deb045;
   border-radius: 15px;
   padding: 7px;
+}
+
+#attackButton:hover {
+  background-color: rgb(34, 119, 230);
 }
 
 #attackButton:active { 
