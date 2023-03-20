@@ -47,12 +47,7 @@ playerGoldDisplay.innerHTML = playerGold;
 enemyHealthDisplay.innerHTML = enemyHealth;
 enemyProfessionDisplay.innerHTML = enemyProfession;
 
-//Event Listeners
-randomNumAttack.addEventListener("click", combat);
-warriorButton.addEventListener("click", playerChoiceWarrior);
-rogueButton.addEventListener("click", playerChoiceRogue);
-wizardButton.addEventListener("click", playerChoiceWizard);
-randomEnemyButton.addEventListener("click", randomEnemyFunction);
+
 
 
 
@@ -180,7 +175,12 @@ const randomEnemyFunction = () => {
 }
 
 
-
+//Event Listeners
+randomNumAttack.addEventListener("click", combat);
+warriorButton.addEventListener("click", playerChoiceWarrior);
+rogueButton.addEventListener("click", playerChoiceRogue);
+wizardButton.addEventListener("click", playerChoiceWizard);
+randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
 
 
