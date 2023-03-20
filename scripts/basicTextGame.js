@@ -21,20 +21,20 @@ let enemyProfession = '';
 
 //DOM HTML classes and ID's imported into JS
 
-const randomNumAttack = document.getElementId("attackButton");
-const warriorButton = document.getElementId("warriorButton");
-const rogueButton = document.getElementId("rogueButton");
-const wizardButton = document.getElementId("wizardButton");
-const playerHealthDisplay = document.getElementId("pHealth");
-const playerProfessionDisplay = document.getElementId("pProfession");
-const playerMaxHealthDisplay = document.getElementId("pMaxHealth");
-const playerMaxExperienceDisplay = document.getElementId("pMaxExperience");
-const playerExperienceDisplay = document.getElementId("pExperience");
-const playerGoldDisplay = document.getElementId("pGold");
-const randomEnemyButton = document.getElementId("randomEnemyButton");
-const enemyHealthDisplay = document.getElementId("eHealth");
-const enemyMaxHealthDisplay = document.getElementId("eMaxHealth");
-const enemyProfessionDisplay = document.getElementId("eProfession");
+const randomNumAttack = document.getElementById("attackButton");
+const warriorButton = document.getElementById("warriorButton");
+const rogueButton = document.getElementById("rogueButton");
+const wizardButton = document.getElementById("wizardButton");
+const playerHealthDisplay = document.getElementById("pHealth");
+const playerProfessionDisplay = document.getElementById("pProfession");
+const playerMaxHealthDisplay = document.getElementById("pMaxHealth");
+const playerMaxExperienceDisplay = document.getElementById("pMaxExperience");
+const playerExperienceDisplay = document.getElementById("pExperience");
+const playerGoldDisplay = document.getElementById("pGold");
+const randomEnemyButton = document.getElementById("randomEnemyButton");
+const enemyHealthDisplay = document.getElementById("eHealth");
+const enemyMaxHealthDisplay = document.getElementById("eMaxHealth");
+const enemyProfessionDisplay = document.getElementById("eProfession");
 
 //DOM Html info import contd. Not sure if these are actually needed, since all of these are either 0 or null to start, and the functions themselves fill these in,
 //but I'm leaving these here for now. 
