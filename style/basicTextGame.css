@@ -84,7 +84,9 @@ Goals:
 
 /* Shared setting for anything clickable to turn the mouse into a hand cursor. */
 
-#attackButton, #warriorButton, #wizardButton, #rogueButton, #randomEnemyButton { 
+
+
+.attackButton, .warriorButton, .wizardButton, .rogueButton, .randomEnemyButton { 
   cursor: pointer
 }
 
@@ -114,7 +116,7 @@ Goals:
   justify-content: center;
 }
 
-#classChoiceZone {
+.classChoiceZone {
   display: inline-flex;
   justify-content: space-between;
   max-width: 300px;
@@ -141,7 +143,7 @@ Goals:
   border: 0px;  
 }
 
-#attackButton {
+.attackButton {
   display: inline-flex;
   border: 5px solid;
   border-color: #deb045;
@@ -149,11 +151,11 @@ Goals:
   padding: 5px;
 }
 
-#attackButton:hover {
+.attackButton:hover {
   background-color: rgb(34, 119, 230);
 }
 
-#randomEnemyButton, #warriorButton, #wizardButton, #rogueButton {
+.randomEnemyButton, .warriorButton, .wizardButton, .rogueButton {
   display: inline-flex;
   border: 5px solid;
   border-color: #deb045;
@@ -161,9 +163,24 @@ Goals:
   padding: 7px;
 }
 
-#attackButton:active { 
+.attackButton:active { 
     background: rgb(0,61,103);
     box-shadow: inset 0 0 5px #000000;
    outline: none;
 }
+
+
+.itmesWithBorder { 
+  display: inline-flex;
+  border: 5px solid;
+  border-color: #deb045;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+.itemsWithoutBorder {
+
+}
+
+
 
