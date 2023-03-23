@@ -4,6 +4,8 @@ https://bobbyhadz.com/blog/javascript-create-element-with-class
 https://webplatform.github.io/docs/dom/tutorials/adding_and_deleting_elements/
 https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
+http://xahlee.info/js/tooltips.html
+
 Goal is to have both tooltips for individual items like player stats ("Stength - Increases damage by x amount, block by x" etc etc)
 In addition, screens for things like shops, leveling up, and more.
 
