@@ -6,6 +6,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
 http://xahlee.info/js/tooltips.html
 
+https://www.codeproject.com/Articles/651387/Creating-JavaScript-Tooltips-Has-Never-Been-This-E
+
 Goal is to have both tooltips for individual items like player stats ("Stength - Increases damage by x amount, block by x" etc etc)
 In addition, screens for things like shops, leveling up, and more.
 
