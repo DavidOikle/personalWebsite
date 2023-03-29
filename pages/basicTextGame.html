@@ -19,19 +19,23 @@
     </nav>
 
   <body>
+    <div class="fullScreenMenu">
+      <div class="fullScreenmenuTop">Basic web Game!</div>
+      <div class="fullScreenMenuMiddle">
+        <p>Hello! My name is David, and welcome to the Basic Web game!</p>
+        <p>This is an ongoing project that I'm using as a means of leanring the wonderful world of Web Development. Tune back in regularly as I add new content!</p>
+        <p>Last Update: March 27th 2023</p>
+        <p>Up next: More abilities to use in combat, and lots of backend work!</p>
+        <p>For now though, which profession would you like to play as?</p>
+       </div>
+      <div class="fullScreenMenuBottom">
+          <div id="warriorButton" class="buttons">Warrior</div>
+          <div id="rogueButton" class="buttons">Rouge</div>
+          <div id="wizardButton" class="buttons">Wizard</div>
+          </div>
 
-    <div class="randomButtonZone">
+    </div>
 
-  <br>
-      <div id="randomNumberDisplay"></div>
-    </div>
- <br>
-    <div class="classChoiceZone">
-      <div id="warriorButton" class="buttons">Warrior</div>
-      <div id="rogueButton" class="buttons">Rouge</div>
-      <div id="wizardButton" class="buttons">Wizard</div>
-      <div id="attackButton" class="buttons">Attack!</div>
-    </div>
 <br>
   <div class="randomEnemyZone">
     <div id="randomEnemyButton" class="buttons">Random Enemy Button!</div>
@@ -43,7 +47,7 @@
      <div id="playerCombatLog"></div>
   </div>
   
-  <div class="playerActionsBox"></div>
+  
              
              
   <div class="combatLogs" >
@@ -82,9 +86,34 @@
           <p class="playerHealthTitle">Level</p>
           <div id="pLevel">1</div>
           </div>
+            <div class="elementInsideOfDisplays">
+            <p class="playerHealthTitle">Martial</p>
+            <div id="martial">0</div>
+            </div>
+            <div class="elementInsideOfDisplays">
+            <p class="playerHealthTitle">Guile</p>
+            <div id="guile">0</div>
+            </div>
+           <div class="elementInsideOfDisplays">
+            <p class="playerHealthTitle">Wizardry</p>
+            <div id="wizardry">0</div>
+            </div>
       </div>
 
-
+      <div class="playerActionsBox">
+       <div class="playerActionsTitle"> Player actions </div>
+        <div class="playerActions">
+          <div class="playerActionsButtons">
+            <div id="attackButton" class="buttons">Attack!</div>
+          </div>
+            <div class="playerActionsButtons">
+              <div id="testButton" class="buttons"> Test </div>
+        </div>
+                  <div class="playerActionsButtons">
+            <div id="skillSlot1" class="buttons">Skill One!</div>
+          </div>
+        </div>
+      </div>
 
       <div class="eInfo">
         <div class="elementInsideOfDisplay">
@@ -101,7 +130,9 @@
         </div>
       </div>
     </div>
-    <script src="../scripts/basicTextGame.js"></script>
+    <script type="module" src="../scripts/basicTextGame.js"></script>
+
+
 
   </body>
 
