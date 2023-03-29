@@ -27,10 +27,12 @@ a {
   display: flex;
   justify-content: center;
   margin-top: auto;
+  
 }
 
 .social {
   margin: 0px 20px;
+  filter: invert(1);
 }
 
 .content {
@@ -51,16 +53,38 @@ a {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 5px solid;
+    border: 3px solid;
     border-color: #deb045;
     border-radius: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.playerActionsBox {
+    text-align: center;
+    display: inline-block;
+    border: 3px solid;
+    border-color: #deb045;
+    border-radius: 15px;
+    min-width: 300px;
+    justify-content: space-between;
+}
+
+.playerActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.playerActionsButtons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .elementInsideOfDisplay { 
-  min-width: 100px;
+  min-width: 20px;
   min-height: 50px;
-  display:inline-block;
-
 }
 
 .playerHealthElements {
@@ -82,7 +106,7 @@ a {
 
 .combatLogs {
   display: inline-block;
-  border: 5px solid #deb045;
+  border: 3px solid #deb045;
   border-radius: 15px;
   min-width: 250px;
   min-height: 100px;
@@ -96,24 +120,60 @@ a {
 }
 
 .buttons { 
-
   cursor: pointer
   display: inline-flex;
-  border: 5px solid;
+  border: 3px solid;
   border-color: #deb045;
   border-radius: 15px;
-  padding: 7px;
+  padding: 5px;
+
+  
 }
 
 .buttons:hover {
   background-color: rgb(34, 119, 230);
+   cursor: pointer
 }
 
 .buttons:active {
    background: rgb(0,61,103);
     box-shadow: inset 0 0 15px #000000;
    outline: none;
+    cursor: pointer
 }
 
 .boxTitles {
+}
+
+
+.fullScreenMenu {
+  margin: auto;
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: green;
+  border: 3px solid;  
+  border-color: #deb045;
+  border-radius: 15px;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  visibility: visible;
+}
+.fullScreenMenuTop {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.fullScreenMenuBottom{
+  display: inline-flex;
+  justify-content: space-between;
+  min-width: 50%
+} 
+
+#attackButton {
+  visibility: hidden;
 }
