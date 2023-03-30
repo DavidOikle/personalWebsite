@@ -15,9 +15,9 @@ var playerMaxExperience = 10;
 var playerGold = 0;
 var enemyProfession = '';
 var playerLevel = 1;
-var martial = 0;
-var guile = 0;
-var wizardry = 0
+var strength = 0;
+var dexterity = 0;
+var intelligence = 0
 var enemyArray = enemyArrayExport;
 var enemyHealth = null;
 var enemyMaxHealth = null;
@@ -41,9 +41,9 @@ const enemyHealthDisplay = document.getElementById("eHealth")
 const enemyMaxHealthDisplay = document.getElementById("eMaxHealth")
 const enemyProfessionDisplay = document.getElementById("eProfession")
 const playerLevelDisplay = document.getElementById("pLevel")
-const playerMartialDisplay = document.getElementById("martial")
-const playerGuileDisplay = document.getElementById("guile")
-const playerWizardryDisplay = document.getElementById("wizardry")
+const playerStrengthDisplay = document.getElementById("strength")
+const playerDexterityDisplay = document.getElementById("dexterity")
+const playerIntelligenceDisplay = document.getElementById("intelligence")
 const fullScreenMenu = document.getElementsByClassName("fullScreenMenu")[0];
 const testButton = document.getElementById("testButton");
 let fullScreenMenuTop = document.getElementsByClassName("fullScreenMenuTop")[0];
@@ -136,65 +136,42 @@ let enemyAttack = () => {
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
 
-/*
-let meleeAttack = () {
-   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (martial - 10)
-   console.log(playerDamageRoll)
-}
-*/
 
-//parent appply player damage to enemy function
-let handleAttack = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (martial - 10)
+let meleeAttack = () => {
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
   };
+  return playerDamageRoll;
+}
+
+
+//parent appply player damage to enemy function
+let handleAttack = () => {
+  console.log(playerDamageRoll)
   enemyHealth = (enemyHealth - playerDamageRoll);
   enemyHealthDisplay.innerHTML = enemyHealth;
 
   // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
   
-/*   
-
-
-
 let fireBall = () => {
-  if (playerMana > 0){
-    playerMana++;
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (wizardy - 10)
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (intelligence - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
   };
-  enemyHealth = (enemyHealth - playerDamageRoll);
-  enemyHealthDisplay.innerHTML = enemyHealth;
+  return playerDamageRoll;
 }
 
 let rangedAttack = () => {
-
-    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (guile - 10)
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
   };
-  enemyHealth = (enemyHealth - playerDamageRoll);
-  enemyHealthDisplay.innerHTML = enemyHealth;
+  return playerDamageRoll;
 }
 
 
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
+ // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
   if (enemyHealth <= 0) {
   enemyHealth = null;
   enemyMaxHealth = null;
@@ -235,21 +212,21 @@ let playerExperienceCheck = () => {
 }
 
 
-//Player choice functions
+//Player profession choice functions
 
 const playerChoiceWarrior = () => {
   playerProfession = "Warrior";
   playerHealth = 10;
   playerMaxHealth = 10;
-  martial = 14;
-  guile = 10
-  wizardry = 8;
+  strength = 14;
+  dexterity = 10
+  intelligence = 8;
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  playerMartialDisplay.innerHTML = martial;
-  playerGuileDisplay.innerHTML = guile;
-  playerWizardryDisplay.innerHTML = wizardry;
+  playerStrengthDisplay.innerHTML = strength;
+  playerDexterityDisplay.innerHTML = dexterity;
+  playerIntelligenceDisplay.innerHTML = intelligence;
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -258,15 +235,15 @@ const playerChoiceRogue = () => {
   playerProfession = "Rogue";
   playerHealth = 8;
   playerMaxHealth = 8;
-  martial = 10;
-  guile = 14;
-  wizardry = 8;
+  strength = 10;
+  dexterity = 14;
+  intelligence = 8;
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  playerMartialDisplay.innerHTML = martial;
-  playerGuileDisplay.innerHTML = guile;
-  playerWizardryDisplay.innerHTML = wizardry;
+  playerStrengthDisplay.innerHTML = strength;
+  playerDexterityDisplay.innerHTML = dexterity;
+  playerIntelligenceDisplay.innerHTML = intelligence;
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -275,15 +252,15 @@ const playerChoiceWizard = () => {
   playerProfession = "Wizard";
   playerHealth = 6;
   playerMaxHealth = 6;
-  martial = 8;
-  guile = 10;
-  wizardry = 14;
+  strength = 8;
+  dexterity = 10;
+  intelligence = 14;
   playerHealthDisplay.innerHTML = playerHealth;
   playerMaxHealthDisplay.innerHTML = playerMaxHealth;
   playerProfessionDisplay.innerHTML = playerProfession;
-  playerMartialDisplay.innerHTML = martial;
-  playerGuileDisplay.innerHTML = guile;
-  playerWizardryDisplay.innerHTML = wizardry;
+  playerStrengthDisplay.innerHTML = strength;
+  playerDexterityDisplay.innerHTML = dexterity;
+  playerIntelligenceDisplay.innerHTML = intelligence;
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -326,7 +303,8 @@ let menuTwo = () => {
 warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
-randomNumAttack.addEventListener("click", combat);
+randomNumAttack.addEventListener("click", meleeAttack);
+randomNumAttack.addEventListener("click", combat );
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
 testButton.addEventListener("click", menuTwo);
 
