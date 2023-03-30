@@ -46,6 +46,9 @@ const playerGuileDisplay = document.getElementById("guile")
 const playerWizardryDisplay = document.getElementById("wizardry")
 const fullScreenMenu = document.getElementsByClassName("fullScreenMenu")[0];
 const testButton = document.getElementById("testButton");
+let fullScreenMenuTop = document.getElementsByClassName("fullScreenMenuTop")[0];
+let fullScreenMenuMiddle = document.getElementsByClassName("fullScreenMenuMiddle")[0];
+let fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBottom")[0];
 
 
 
@@ -92,15 +95,6 @@ parentAttack = () => {
  */
 
 
-/*
-
-Repopulating the fullScreenMenu(+Middle +Bottom)
-
-var temp = () => {
-    
-}
-
-*/
 
 
 
@@ -142,6 +136,14 @@ let enemyAttack = () => {
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
 
+/*
+let meleeAttack = () {
+   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (martial - 10)
+   console.log(playerDamageRoll)
+}
+*/
+
+//parent appply player damage to enemy function
 let handleAttack = () => {
   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (martial - 10)
   if (playerDamageRoll < 1) {
@@ -169,7 +171,7 @@ let fireBall = () => {
 
 let rangedAttack = () => {
 
-    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (Martial - 10)
+    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (guile - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
   };
@@ -216,16 +218,6 @@ let rangedAttack = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 let playerExperienceCheck = () => {
    if (playerExperience >= playerMaxExperience) {
       playerExperience = 0;
@@ -259,7 +251,6 @@ const playerChoiceWarrior = () => {
   playerGuileDisplay.innerHTML = guile;
   playerWizardryDisplay.innerHTML = wizardry;
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
-  
 };
 
 const playerChoiceRogue = () => {
@@ -303,7 +294,8 @@ const playerChoiceWizard = () => {
 
 
 
-let menuOne = () => {
+/*let menuOne = () => {
+  
   fullScreenMenuTop.innerHTML = "Basic Web Game"
   fullScreenMenuMiddle.innerHTML = "Hello my name is David, and welcome to the Basic Web Game!"
   "This is a simple little project I'm using as a means of learning web development in my spare time. Be sure to check back regularly, as I continually add more to this project as I the learn the quirks and fun of HTML, CSS, JavaScript, and more!"
@@ -311,16 +303,17 @@ let menuOne = () => {
   "To do: Add player portraits, revamp some code, and give other classes things to do other than attacking."
   "For now though, what profession would you like to play as?"
   fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text"
-}
+} */
 
 
 
 
 
 let menuTwo = () => {
-  fullScreenMenuTop.innerHTML = "MenuOne Title"
-  fullScreenMenuMiddle.innerHTML = "MenuOne Middle Text"
-  fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text"
+    document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
+  fullScreenMenuTop.innerHTML = "Choose a skill";
+  fullScreenMenuMiddle.innerHTML = "MenuOne Middle Text";
+  fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
 }
 
 
@@ -335,7 +328,8 @@ rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
 randomNumAttack.addEventListener("click", combat);
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
-testButton.addEventListener("click", temp);
+testButton.addEventListener("click", menuTwo);
+
 
 
 
