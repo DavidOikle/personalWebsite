@@ -2,6 +2,7 @@
 
 
 import {enemyArrayExport} from "./enemyList.js"    
+import { skillArrayExport, skillNameExport } from "./playerSkills.js";
 
 //Variables
 
@@ -21,6 +22,9 @@ var intelligence = 0
 var enemyArray = enemyArrayExport;
 var enemyHealth = null;
 var enemyMaxHealth = null;
+var skillArray = skillArrayExport;
+var skillName = null;
+var skillDamage = null;
 
 
 
@@ -46,9 +50,19 @@ const playerDexterityDisplay = document.getElementById("dexterity")
 const playerIntelligenceDisplay = document.getElementById("intelligence")
 const fullScreenMenu = document.getElementsByClassName("fullScreenMenu")[0];
 const testButton = document.getElementById("testButton");
-let fullScreenMenuTop = document.getElementsByClassName("fullScreenMenuTop")[0];
-let fullScreenMenuMiddle = document.getElementsByClassName("fullScreenMenuMiddle")[0];
-let fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBottom")[0];
+const fullScreenMenuTop = document.getElementsByClassName("fullScreenMenuTop")[0];
+const fullScreenMenuMiddle = document.getElementsByClassName("fullScreenMenuMiddle")[0];
+const fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBottom")[0];
+const skillChoiceOne = document.getElementById("skillChoiceOne");
+const skillChoiceTwo = document.getElementById("skillChoiceTwo");
+const skillChoiceThree = document.getElementById("skillChoiceThree");
+
+
+
+
+
+
+
 
 
 
@@ -265,38 +279,55 @@ const playerChoiceWizard = () => {
 };
 
 
-//Generate enemy function
 
 
+/* When clicking the test button, pop up a menu that replaces the bottom text with 3 buttons. 
+When one of those buttons is clicked, it replaces the SKILL ONE slot with the respective skill.
 
+First step is to inser the 3 buttons in the fullScreenMenuBottom.innerHTML. 
 
-
-/*let menuOne = () => {
-  
-  fullScreenMenuTop.innerHTML = "Basic Web Game"
-  fullScreenMenuMiddle.innerHTML = "Hello my name is David, and welcome to the Basic Web Game!"
-  "This is a simple little project I'm using as a means of learning web development in my spare time. Be sure to check back regularly, as I continually add more to this project as I the learn the quirks and fun of HTML, CSS, JavaScript, and more!"
-  "Last Updated: March 27th 2023"
-  "To do: Add player portraits, revamp some code, and give other classes things to do other than attacking."
-  "For now though, what profession would you like to play as?"
-  fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text"
-} */
-
-
-
-
+ */
 
 let menuTwo = () => {
+  
+    document.getElementById("warriorButton").style.visibility = 'hidden';
+    document.getElementById("rogueButton").style.visibility = 'hidden';
+    document.getElementById("wizardButton").style.visibility = 'hidden';
+    document.getElementById("skillChoiceOne").style.visibility = 'visible'
+    document.getElementById("skillChoiceTwo").style.visibility = 'visible'
+    document.getElementById("skillChoiceThree").style.visibility = 'visible'
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
+  
+
+    
   fullScreenMenuTop.innerHTML = "Choose a skill";
-  fullScreenMenuMiddle.innerHTML = "MenuOne Middle Text";
-  fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
+  fullScreenMenuMiddle.innerHTML = "Starting at level 2, every 2 levels you get to choose a skill. Subject to change, and will eventually include passives and such. TOOLTIPS COMING EVENTUALLY.";
+  //fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
+  skillChoiceOne.innerHTML= "Skill One";
+  skillChoiceTwo.innerHTML= "Skill Two";
+  skillChoiceThree.innerHTML = "Skill Three";
 }
 
+const skillFunctionOne = () => {
+  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
+  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
+  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
+  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+}
 
+const skillFunctionTwo = () => {
+  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
+  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
+  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
+  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+}
 
-
-
+const skillFunctionThree = () => {
+  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
+  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
+  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
+  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+}
 
 //Event Listeners
 
@@ -307,12 +338,6 @@ randomNumAttack.addEventListener("click", meleeAttack);
 randomNumAttack.addEventListener("click", combat );
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
 testButton.addEventListener("click", menuTwo);
-
-
-
-
-
-
-
-
-
+skillChoiceOne.addEventListener("click", skillFunctionOne);
+skillChoiceTwo.addEventListener("click", skillFunctionTwo);
+skillChoiceThree.addEventListener("click", skillFunctionThree);
