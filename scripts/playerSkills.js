@@ -27,3 +27,16 @@ let skillDamage = randomSkill[1]
 export const skillNameExport = skillName;
 export const skillDamageExport = skillDamage;
 export const skillArrayExport = skillArray;
+
+
+
+
+
+/* Make a larger function thats maybe just called "Skills". Add it to the larger combat function, and make it so its just super long and has all the skills contained in it or something.
+Each skill starts with an check for the relevant ID, and provides the damage caluclations for the relevant skill.
+
+On the HTML side, each skill button has a class that they all share, and the ID's are updated when a skill is chosen and such.
+
+The parent class for the skill buttons is for invoking the larger function, and the ID acts as the check.
+
+Probably need to make an empty variable that gets filled with the relvant skills ID, and then THAT variable is what's checked for the "if {}".*/ 

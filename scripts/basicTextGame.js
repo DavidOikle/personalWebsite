@@ -1,8 +1,7 @@
 // JS imports from other files
 
-
 import {enemyArrayExport} from "./enemyList.js"    
-import { skillArrayExport, skillNameExport } from "./playerSkills.js";
+import {skillArrayExport, skillNameExport, skillDamageExport} from "./playerSkills.js";
 
 //Variables
 
@@ -23,9 +22,8 @@ var enemyArray = enemyArrayExport;
 var enemyHealth = null;
 var enemyMaxHealth = null;
 var skillArray = skillArrayExport;
-var skillName = null;
+var skillName = "";
 var skillDamage = null;
-
 
 
 
@@ -56,7 +54,8 @@ const fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBott
 const skillChoiceOne = document.getElementById("skillChoiceOne");
 const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
-
+const skillSlot1 = document.getElementById("skillSlot1")
+const Charge = document.getElementById("Charge")
 
 
 
@@ -111,10 +110,6 @@ parentAttack = () => {
 
 
 
-
-
-
-
 var randomEnemyFunction = () => {
     var randomEnemy = enemyArray[Math.floor(Math.random() * enemyArray.length)];
     enemyProfession = randomEnemy[0];
@@ -125,7 +120,6 @@ var randomEnemyFunction = () => {
     enemyHealthDisplay.innerHTML = enemyHealth;
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
-    console.log("test")
       document.getElementById("attackButton").style.visibility = "visible";
 
 }
@@ -159,10 +153,17 @@ let meleeAttack = () => {
   return playerDamageRoll;
 }
 
+/*let chargeAttack = () => {
+  console.log("chargeAttack console log")
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+} */
 
 //parent appply player damage to enemy function
 let handleAttack = () => {
-  console.log(playerDamageRoll)
   enemyHealth = (enemyHealth - playerDamageRoll);
   enemyHealthDisplay.innerHTML = enemyHealth;
 
@@ -288,6 +289,31 @@ First step is to inser the 3 buttons in the fullScreenMenuBottom.innerHTML.
 
  */
 
+let skillSlotName = skillName;
+
+function skills() {
+  skillFunctionOne();
+  skillFunctionTwo();
+  skillFunctionThree();
+}
+
+var randomSkillFunction = () => {
+  var randomSkill = skillArray[Math.floor(Math.random() * skillArray.length)];
+  skillName = randomSkill[0];
+  skillDamage = randomSkill[1];
+  skillChoiceOne.innerHTML = skillName;
+  skillChoiceTwo.innerHTML = "";
+  skillChoiceThree.innerHTML = "";
+}
+
+
+function skillSetup() {
+  randomSkillFunction();
+  menuTwo();
+ // skillEventListeners();
+}
+
+
 let menuTwo = () => {
   
     document.getElementById("warriorButton").style.visibility = 'hidden';
@@ -303,16 +329,21 @@ let menuTwo = () => {
   fullScreenMenuTop.innerHTML = "Choose a skill";
   fullScreenMenuMiddle.innerHTML = "Starting at level 2, every 2 levels you get to choose a skill. Subject to change, and will eventually include passives and such. TOOLTIPS COMING EVENTUALLY.";
   //fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
-  skillChoiceOne.innerHTML= "Skill One";
-  skillChoiceTwo.innerHTML= "Skill Two";
-  skillChoiceThree.innerHTML = "Skill Three";
+  //skillChoiceOne.innerHTML= skillName;
+  //skillChoiceTwo.innerHTML= "Skill Two";
+  //skillChoiceThree.innerHTML = "Skill Three";
 }
 
+
+
 const skillFunctionOne = () => {
+  
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
   document.getElementById("skillChoiceOne").style.visibility = 'hidden'
   document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
   document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+  skillSlot1.innerHTML = skillName;
+  document.getElementById("skillSlot1").setAttribute("id", skillName)
 }
 
 const skillFunctionTwo = () => {
@@ -320,6 +351,7 @@ const skillFunctionTwo = () => {
   document.getElementById("skillChoiceOne").style.visibility = 'hidden'
   document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
   document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+  
 }
 
 const skillFunctionThree = () => {
@@ -329,15 +361,33 @@ const skillFunctionThree = () => {
   document.getElementById("skillChoiceThree").style.visibility = 'hidden'
 }
 
+
 //Event Listeners
 
 warriorButton.addEventListener("click", playerChoiceWarrior);
 rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
+
 randomNumAttack.addEventListener("click", meleeAttack);
 randomNumAttack.addEventListener("click", combat );
+
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
-testButton.addEventListener("click", menuTwo);
-skillChoiceOne.addEventListener("click", skillFunctionOne);
-skillChoiceTwo.addEventListener("click", skillFunctionTwo);
-skillChoiceThree.addEventListener("click", skillFunctionThree);
+testButton.addEventListener("click", skillSetup);
+skillChoiceOne.addEventListener("click", skills);
+skillChoiceTwo.addEventListener("click", skills);
+skillChoiceThree.addEventListener("click", skills);
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
