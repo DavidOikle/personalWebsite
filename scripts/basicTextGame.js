@@ -143,7 +143,7 @@ let enemyAttack = () => {
 }
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
-
+//Player combat Abilities
 
 let meleeAttack = () => {
   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
@@ -153,8 +153,7 @@ let meleeAttack = () => {
   return playerDamageRoll;
 }
 
-/*let chargeAttack = () => {
-  console.log("chargeAttack console log")
+let charge = () => {
   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
@@ -162,13 +161,23 @@ let meleeAttack = () => {
   return playerDamageRoll;
 } */
 
-//parent appply player damage to enemy function
-let handleAttack = () => {
-  enemyHealth = (enemyHealth - playerDamageRoll);
-  enemyHealthDisplay.innerHTML = enemyHealth;
+let cleave = () => {
+    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
 
-  // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
-  
+let shieldBash = () => {
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
+
+
 let fireBall = () => {
   playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (intelligence - 10)
   if (playerDamageRoll < 1) {
@@ -177,13 +186,53 @@ let fireBall = () => {
   return playerDamageRoll;
 }
 
-let rangedAttack = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
+let frostSpray = () => {
+  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (intelligence - 10)
   if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
   };
   return playerDamageRoll;
 }
+
+let staticShield = () => {
+    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
+
+let poisonDart = () => {
+      playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
+
+let fireWorksVolley = () => {
+      playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
+
+let doubleImage = () => {
+    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
+  if (playerDamageRoll < 1) {
+    playerDamageRoll = 1;
+  };
+  return playerDamageRoll;
+}
+
+//parent appply player damage to enemy function
+let handleAttack = () => {
+  enemyHealth = (enemyHealth - playerDamageRoll);
+  enemyHealthDisplay.innerHTML = enemyHealth;
+
+  // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
+  
 
 
  // Resets the Enemy Health and Enemy Profession boxes when the enemy's health hits 0 or less.
@@ -289,6 +338,17 @@ First step is to inser the 3 buttons in the fullScreenMenuBottom.innerHTML.
 
  */
 
+
+
+
+
+
+
+//Old stuff to sort through at a later date: 
+/*
+
+
+
 let skillSlotName = skillName;
 
 function skills() {
@@ -369,7 +429,13 @@ rogueButton.addEventListener("click", playerChoiceRogue);
 wizardButton.addEventListener("click", playerChoiceWizard);
 
 randomNumAttack.addEventListener("click", meleeAttack);
-randomNumAttack.addEventListener("click", combat );
+randomNumAttack.addEventListener("click", combat);
+
+
+
+
+
+
 
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
 testButton.addEventListener("click", skillSetup);
@@ -379,6 +445,9 @@ skillChoiceThree.addEventListener("click", skills);
 
 
 
+
+
+*/
 
   
 
