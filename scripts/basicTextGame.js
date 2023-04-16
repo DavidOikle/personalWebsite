@@ -143,6 +143,7 @@ let enemyAttack = () => {
 }
  enemyCombatLog.innerHTML = `The enemy strikes you ${enemyDamageRoll} damage.`;
 }
+
 //Player combat Abilities
 
 let meleeAttack = () => {
@@ -159,7 +160,7 @@ let charge = () => {
     playerDamageRoll = 1;
   };
   return playerDamageRoll;
-} */
+} 
 
 let cleave = () => {
     playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
