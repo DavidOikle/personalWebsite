@@ -338,6 +338,31 @@ randomNumAttack.addEventListener("click", meleeAttack);
 randomNumAttack.addEventListener("click", combat);
 
 
+/*
+      CLASS ABILITIES REPLACING BUTTONS AND SUCH THINGY
+      
+      fillInSkillChoiceMenuOptions = () => {
+        if playerProfession == "warrior" {
+        skillChoiceOne = "charge";
+        skillChoiceTwo = "cleave";
+        skillChoiceThree = "shieldBash";
+        }
+        elseif playerProfession == "wizard" {
+        skillChoiceOne = "fireBall";
+        skillChoiceTwo = "frostSpray";
+        skillChoiceThree = "staticShield";
+        }
+        elseif playerProfession == "rouge" {
+        skillChoiceOne = "poisonsDart";
+        skillChoiceTwo = "fireWorksVolley";
+        skillChoiceThree = "doubleImage";
+        }
+      }
+  
+      
+
+*/
+
 
 
 
