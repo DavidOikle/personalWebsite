@@ -330,6 +330,15 @@ const playerChoiceWizard = () => {
 };
 
 
+warriorButton.addEventListener("click", playerChoiceWarrior);
+rogueButton.addEventListener("click", playerChoiceRogue);
+wizardButton.addEventListener("click", playerChoiceWizard);
+
+randomNumAttack.addEventListener("click", meleeAttack);
+randomNumAttack.addEventListener("click", combat);
+
+
+
 
 
 /* When clicking the test button, pop up a menu that replaces the bottom text with 3 buttons. 
@@ -425,12 +434,6 @@ const skillFunctionThree = () => {
 
 //Event Listeners
 
-warriorButton.addEventListener("click", playerChoiceWarrior);
-rogueButton.addEventListener("click", playerChoiceRogue);
-wizardButton.addEventListener("click", playerChoiceWizard);
-
-randomNumAttack.addEventListener("click", meleeAttack);
-randomNumAttack.addEventListener("click", combat);
 
 
 
