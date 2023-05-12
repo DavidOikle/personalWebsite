@@ -336,7 +336,7 @@ wizardButton.addEventListener("click", playerChoiceWizard);
 
 randomNumAttack.addEventListener("click", meleeAttack);
 randomNumAttack.addEventListener("click", combat);
-
+randomEnemyButton.addEventListener("click", randomEnemyFunction);
 
 /*
       CLASS ABILITIES REPLACING BUTTONS AND SUCH THINGY
@@ -466,7 +466,6 @@ const skillFunctionThree = () => {
 
 
 
-randomEnemyButton.addEventListener("click", randomEnemyFunction);
 testButton.addEventListener("click", skillSetup);
 skillChoiceOne.addEventListener("click", skills);
 skillChoiceTwo.addEventListener("click", skills);
