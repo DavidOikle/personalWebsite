@@ -354,11 +354,8 @@ let menuTwo = () => {
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
     fullScreenMenuTop.innerHTML = "Choose a skill";
     fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
-}
-
-     
-
-  if (playerProfession == "warrior") {
+  
+    if (playerProfession == "warrior") {
         skillChoiceOne = "charge";
         skillChoiceOne.innerHTML = "Charge";
         skillChoiceTwo = "cleave";
@@ -382,6 +379,11 @@ let menuTwo = () => {
         skillChoiceThree = "doubleImage";
         skillChoiceThree.innerHTML = "Double Image";
         }
+}
+
+     
+
+
 
 
 
