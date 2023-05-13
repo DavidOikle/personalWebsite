@@ -354,10 +354,6 @@ let menuTwo = () => {
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
     fullScreenMenuTop.innerHTML = "Choose a skill";
     fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
-  
-  
-      
-        
 }
 
      
@@ -370,7 +366,7 @@ let menuTwo = () => {
         skillChoiceThree = "shieldBash";
         skillChoiceThree.innerHTML = "Shield Bash";
         }
-        elseif (playerProfession == "wizard") {
+  if (playerProfession == "wizard") {
         skillChoiceOne = "fireBall";
         skillChoiceOne.innerhtml = "Fire Ball";
         skillChoiceTwo = "frostSpray";
@@ -378,7 +374,7 @@ let menuTwo = () => {
         skillChoiceThree = "staticShield";
         skillChoiceThree.innerHTML = "Static Shield";
         }
-        elseif (playerProfession == "rouge") {
+  if (playerProfession == "rouge") {
         skillChoiceOne = "poisonsDart";
         skillChoiceOne.innerHTML = "Poison Dart";
         skillChoiceTwo = "fireWorksVolley";
