@@ -381,7 +381,8 @@ let menuTwo = () => {
         }
 }
 
-     
+     // Current plan to try is to take the original 3 class buttons in the full screen menu, and set the ID attribute of them to the skills. Test with "skillChoiceOne" and such for now. 
+     // This is similar to what we did before, however the actual buttons for combat (cleaveButton for example) will be static and just hidden. Just need to ensure they each skill slot has a skill for each class occupying it, so that there isnt any issues with the formatting and such.
 
 
 
