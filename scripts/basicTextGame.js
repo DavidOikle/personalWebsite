@@ -341,7 +341,7 @@ testButton.addEventListener("click", skillSetup);
 
 
 function skillSetup() {
-  menuTwo();
+  menuTwo(); }
 
 let menuTwo = () => {
   
@@ -355,7 +355,7 @@ let menuTwo = () => {
     fullScreenMenuTop.innerHTML = "Choose a skill";
     fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
   
-  /*
+  
           if playerProfession == "warrior" {
         skillChoiceOne = "charge";
         skillChoiceOne.innerHTML = "Charge";
