@@ -361,8 +361,8 @@ let menuTwo = () => {
 }
 
      
-/*
-  if playerProfession == "warrior" {
+
+  if (playerProfession == "warrior") {
         skillChoiceOne = "charge";
         skillChoiceOne.innerHTML = "Charge";
         skillChoiceTwo = "cleave";
@@ -370,7 +370,7 @@ let menuTwo = () => {
         skillChoiceThree = "shieldBash";
         skillChoiceThree.innerHTML = "Shield Bash";
         }
-        elseif playerProfession == "wizard" {
+        elseif (playerProfession == "wizard") {
         skillChoiceOne = "fireBall";
         skillChoiceOne.innerhtml = "Fire Ball";
         skillChoiceTwo = "frostSpray";
@@ -378,7 +378,7 @@ let menuTwo = () => {
         skillChoiceThree = "staticShield";
         skillChoiceThree.innerHTML = "Static Shield";
         }
-        elseif playerProfession == "rouge" {
+        elseif (playerProfession == "rouge") {
         skillChoiceOne = "poisonsDart";
         skillChoiceOne.innerHTML = "Poison Dart";
         skillChoiceTwo = "fireWorksVolley";
@@ -387,7 +387,7 @@ let menuTwo = () => {
         skillChoiceThree.innerHTML = "Double Image";
         }
 
-*/
+
 
 
 /*
