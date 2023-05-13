@@ -337,77 +337,11 @@ wizardButton.addEventListener("click", playerChoiceWizard);
 randomNumAttack.addEventListener("click", meleeAttack);
 randomNumAttack.addEventListener("click", combat);
 randomEnemyButton.addEventListener("click", randomEnemyFunction);
-
-/*
-      CLASS ABILITIES REPLACING BUTTONS AND SUCH THINGY
-      
-      fillInSkillChoiceMenuOptions = () => {
-        if playerProfession == "warrior" {
-        skillChoiceOne = "charge";
-        skillChoiceTwo = "cleave";
-        skillChoiceThree = "shieldBash";
-        }
-        elseif playerProfession == "wizard" {
-        skillChoiceOne = "fireBall";
-        skillChoiceTwo = "frostSpray";
-        skillChoiceThree = "staticShield";
-        }
-        elseif playerProfession == "rouge" {
-        skillChoiceOne = "poisonsDart";
-        skillChoiceTwo = "fireWorksVolley";
-        skillChoiceThree = "doubleImage";
-        }
-      }
-  
-      
-
-*/
-
-
-
-
-/* When clicking the test button, pop up a menu that replaces the bottom text with 3 buttons. 
-When one of those buttons is clicked, it replaces the SKILL ONE slot with the respective skill.
-
-First step is to inser the 3 buttons in the fullScreenMenuBottom.innerHTML. 
-
- */
-
-
-
-
-
-
-
-//Old stuff to sort through at a later date: 
-/*
-
-
-
-let skillSlotName = skillName;
-
-function skills() {
-  skillFunctionOne();
-  skillFunctionTwo();
-  skillFunctionThree();
-}
-
-var randomSkillFunction = () => {
-  var randomSkill = skillArray[Math.floor(Math.random() * skillArray.length)];
-  skillName = randomSkill[0];
-  skillDamage = randomSkill[1];
-  skillChoiceOne.innerHTML = skillName;
-  skillChoiceTwo.innerHTML = "";
-  skillChoiceThree.innerHTML = "";
-}
+testButton.addEventListener("click", skillSetup);
 
 
 function skillSetup() {
-  randomSkillFunction();
   menuTwo();
- // skillEventListeners();
-}
-
 
 let menuTwo = () => {
   
@@ -419,17 +353,46 @@ let menuTwo = () => {
     document.getElementById("skillChoiceThree").style.visibility = 'visible'
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
   
+    fullScreenMenuTop.innerHTML = "Choose a skill";
+    fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
+  
+          if playerProfession == "warrior" {
+        skillChoiceOne = "charge";
+        skillChoiceOne.innerHTML = "Charge";
+        skillChoiceTwo = "cleave";
+        skillChoiceTwo.innerHTML = "Cleave";
+        skillChoiceThree = "shieldBash";
+        skillChoiceThree.innerHTML = "Shield Bash";
+        }
+        elseif playerProfession == "wizard" {
+        skillChoiceOne = "fireBall";
+        skillChoiceOne.innerhtml = "Fire Ball";
+        skillChoiceTwo = "frostSpray";
+        skillChoiceTwo.innerHTML = "Frost Spray";
+        skillChoiceThree = "staticShield";
+        skillChoiceThree.innerHTML = "Static Shield";
+        }
+        elseif playerProfession == "rouge" {
+        skillChoiceOne = "poisonsDart";
+        skillChoiceOne.innerHTML = "Poison Dart";
+        skillChoiceTwo = "fireWorksVolley";
+        skillChoiceTwo.innerHTML = "Fireworks Volley";
+        skillChoiceThree = "doubleImage";
+        skillChoiceThree.innerHTML = "Double Image";
+        }
+}
 
+     
+
+
+
+/*
     
-  fullScreenMenuTop.innerHTML = "Choose a skill";
-  fullScreenMenuMiddle.innerHTML = "Starting at level 2, every 2 levels you get to choose a skill. Subject to change, and will eventually include passives and such. TOOLTIPS COMING EVENTUALLY.";
   //fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
   //skillChoiceOne.innerHTML= skillName;
   //skillChoiceTwo.innerHTML= "Skill Two";
   //skillChoiceThree.innerHTML = "Skill Three";
 }
-
-
 
 const skillFunctionOne = () => {
   
@@ -466,7 +429,6 @@ const skillFunctionThree = () => {
 
 
 
-testButton.addEventListener("click", skillSetup);
 skillChoiceOne.addEventListener("click", skills);
 skillChoiceTwo.addEventListener("click", skills);
 skillChoiceThree.addEventListener("click", skills);
