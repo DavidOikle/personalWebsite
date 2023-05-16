@@ -186,3 +186,7 @@ img {
   visibility: hidden;
 }
 
+#charge, #cleave, #shieldBash {
+ visibility: visible;
+}
+
