@@ -366,9 +366,12 @@ let changeToSkills = () => {
   chargeChoiceButton.innerHTML = "Charge";
   cleaveChoiceButton.innerHTML = "Cleave";
   shieldBashChoiceButton.innerHTML = "Shield Bash";
-  document.getElementById("chargeChoiceButton").style.visibility = 'visible";
-  document.getElementById("cleaveChoiceButton").style.visibility = 'visible";
-  document.getElementById("shieldBashChoiceButton").style.visibility = "visible";
+  chargeChoiceButton.setAttribute("visibility, "visible");
+  cleaveChoiceButton.setAttribute("visibility, "visible");
+  shieldBashChoiceButton.setAttribute("visibility, "visible");
+ //document.getElementById("chargeChoiceButton").style.visibility = 'visible";
+  //document.getElementById("cleaveChoiceButton").style.visibility = 'visible";
+//  document.getElementById("shieldBashChoiceButton").style.visibility = "visible";
 }
 
 
