@@ -364,11 +364,11 @@ let changeToSkills = () => {
   rogueButton.setAttribute("id", "cleave");
   wizardButton.setAttribute("id", "shieldBash");
   charge.innerHTML = "Charge";
+  charge.setAttribute("visibility", "visible");
   cleave.innerHTML = "Cleave";
+  cleave.setAttribute("visibility", "visible");
   shieldBash.innerHTML = "Shield Bash";
-  document.getElementById("Charge").style.visibility = 'visible';
-  document.getElementById("Cleave").style.visibility = 'visible';
-  document.getElementById("shieldBash").style.visibility = "visible";
+  shieldBash.setAttribute("visibility", "visible");
 }
 
 
