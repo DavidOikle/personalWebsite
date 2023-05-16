@@ -346,13 +346,6 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
-  
-    //document.getElementById("warriorButton").style.visibility = 'hidden';
-    //document.getElementById("rogueButton").style.visibility = 'hidden';
-    // document.getElementById("wizardButton").style.visibility = 'hidden';
-    //document.getElementById("skillChoiceOne").style.visibility = 'visible';
-    //document.getElementById("skillChoiceTwo").style.visibility = 'visible';
-    //document.getElementById("skillChoiceThree").style.visibility = 'visible';
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
     fullScreenMenuTop.innerHTML = "Choose a skill";
     fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
@@ -366,6 +359,11 @@ let changeToSkills = () => {
   chargeChoiceButton.innerHTML = "Charge";
   cleaveChoiceButton.innerHTML = "Cleave";
   shieldBashChoiceButton.innerHTML = "Shield Bash";
+  chargeChoiceButton.addEventListener("click", playerChoiceCharge);
+}
+
+let playerChoiceCharge = () => {
+  
 }
 
 
