@@ -360,12 +360,15 @@ let menuTwo = () => {
 
 
 let changeToSkills = () => {
-  warriorButton.setAttribute("id", "charge");
-  rogueButton.setAttribute("id", "cleave");
-  wizardButton.setAttribute("id", "shieldBash");
-  charge.innerHTML = "Charge";
-  cleave.innerHTML = "Cleave";
-  shieldBash.innerHTML = "Shield Bash";
+  warriorButton.setAttribute("id", "chargeChoiceButton");
+  rogueButton.setAttribute("id", "cleaveChoiceButton");
+  wizardButton.setAttribute("id", "shieldBashChoiceButton");
+  chargeChoiceButton.innerHTML = "Charge";
+  cleaveChoiceButton.innerHTML = "Cleave";
+  shieldBashChoiceButton.innerHTML = "Shield Bash";
+  document.getElementById("chargeChoiceButton").style.visibility = 'visible";
+  document.getElementById("cleaveChoiceButton").style.visibility = 'visible";
+  document.getElementById("shieldBashChoiceButton").style.visibility = "visible";
 }
 
 
