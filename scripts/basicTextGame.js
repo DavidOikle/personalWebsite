@@ -366,6 +366,9 @@ let changeToSkills = () => {
   charge.innerHTML = "Charge";
   cleave.innerHTML = "Cleave";
   shieldBash.innerHTML = "Shield Bash";
+  document.getElementById("Charge").style.visibility = 'visible';
+  document.getElementById("Cleave").style.visibility = 'visible';
+  document.getElementById("shieldBash").style.visibility = "visible";
 }
 
 
