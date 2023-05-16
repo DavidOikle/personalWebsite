@@ -341,7 +341,9 @@ testButton.addEventListener("click", skillSetup);
 
 
 function skillSetup() {
-  menuTwo(); }
+  menuTwo();
+  changeToSkills();
+}
 
 let menuTwo = () => {
   
@@ -354,7 +356,21 @@ let menuTwo = () => {
     document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
     fullScreenMenuTop.innerHTML = "Choose a skill";
     fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
-  
+}
+
+
+let changeToSkills = () => {
+  warriorButton.setAttribute("id", "charge");
+  rogueButton.setAttribute("id", "cleave");
+  wizardButton.setAttribute("id", "shieldBash");
+  charge.innerHTML = "Charge";
+  cleave.innerHTML = "Cleave";
+  shieldBash.innerHTML = "Shield Bash";
+}
+
+
+
+/*
     if (playerProfession == "warrior") {
         skillChoiceOne = "charge";
         skillChoiceOne.innerHTML = "Charge";
@@ -379,8 +395,8 @@ let menuTwo = () => {
         skillChoiceThree = "doubleImage";
         skillChoiceThree.innerHTML = "Double Image";
         }
-}
 
+*/
      // Current plan to try is to take the original 3 class buttons in the full screen menu, and set the ID attribute of them to the skills. Test with "skillChoiceOne" and such for now. 
      // This is similar to what we did before, however the actual buttons for combat (cleaveButton for example) will be static and just hidden. Just need to ensure they each skill slot has a skill for each class occupying it, so that there isnt any issues with the formatting and such.
 
