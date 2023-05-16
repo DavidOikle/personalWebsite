@@ -347,9 +347,9 @@ function skillSetup() {
 
 let menuTwo = () => {
   
-    document.getElementById("warriorButton").style.visibility = 'hidden';
-    document.getElementById("rogueButton").style.visibility = 'hidden';
-    document.getElementById("wizardButton").style.visibility = 'hidden';
+    //document.getElementById("warriorButton").style.visibility = 'hidden';
+    //document.getElementById("rogueButton").style.visibility = 'hidden';
+    // document.getElementById("wizardButton").style.visibility = 'hidden';
     //document.getElementById("skillChoiceOne").style.visibility = 'visible';
     //document.getElementById("skillChoiceTwo").style.visibility = 'visible';
     //document.getElementById("skillChoiceThree").style.visibility = 'visible';
@@ -366,12 +366,6 @@ let changeToSkills = () => {
   chargeChoiceButton.innerHTML = "Charge";
   cleaveChoiceButton.innerHTML = "Cleave";
   shieldBashChoiceButton.innerHTML = "Shield Bash";
-  chargeChoiceButton.setAttribute("visibility, "visible");
-  cleaveChoiceButton.setAttribute("visibility, "visible");
-  shieldBashChoiceButton.setAttribute("visibility, "visible");
- //document.getElementById("chargeChoiceButton").style.visibility = 'visible";
-  //document.getElementById("cleaveChoiceButton").style.visibility = 'visible";
-//  document.getElementById("shieldBashChoiceButton").style.visibility = "visible";
 }
 
 
