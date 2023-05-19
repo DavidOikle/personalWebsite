@@ -348,10 +348,10 @@ let menuTwo = () => {
     document.getElementById("fullScreenMenuTwo").style.visibility = 'visible';
     if (playerProfession == "warrior") {
         skillChoiceOne.innerHTML = "Charge";
-        skillChoiceTwo.innHTML = "Cleave"
+        skillChoiceTwo.innHTML = "Cleave";
         skillChoiceThree.innerHTML = "Shield Bash";
     }
-    else (playerProfession == "wizard") {
+   /* else (playerProfession == "wizard") {
       skillChoiceOne.innerHTML = "Fire Ball";
       skillChoiceTwo.innerHTML = "Frost Spray";
       skillChoiceThree.innerHTML = "Static Shield";
@@ -361,7 +361,7 @@ let menuTwo = () => {
       skillChoiceOne.innerHTML = "Poison Dart";
       skillChoiceTwo.innerHTML = "Fire Works Volley";
       skillChoiceThree.innerHTML = "Double Image";
-    }
+    } */
 }
 
 skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
