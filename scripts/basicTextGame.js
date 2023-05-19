@@ -364,10 +364,6 @@ let menuTwo = () => {
     } */
 }
 
-skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
-skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
-skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
-
 
 
 let skillChoiceOneEnable = () => {
@@ -395,6 +391,10 @@ let skillChoiceThreeEnable = () => {
 
 
 
+
+skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
+skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
+skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
 
 
 
