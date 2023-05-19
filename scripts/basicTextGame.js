@@ -342,120 +342,54 @@ testButton.addEventListener("click", skillSetup);
 
 function skillSetup() {
   menuTwo();
-  changeToSkills();
 }
 
 let menuTwo = () => {
-    document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'visible';
-    fullScreenMenuTop.innerHTML = "Choose a skill";
-    fullScreenMenuMiddle.innerHTML = "At level 2, choose an additional skill. Additional skills, tooltips, and more coming eventually";
-}
-
-
-let changeToSkills = () => {
-  warriorButton.setAttribute("id", "chargeChoiceButton");
-  rogueButton.setAttribute("id", "cleaveChoiceButton");
-  wizardButton.setAttribute("id", "shieldBashChoiceButton");
-  chargeChoiceButton.innerHTML = "Charge";
-  cleaveChoiceButton.innerHTML = "Cleave";
-  shieldBashChoiceButton.innerHTML = "Shield Bash";
-  chargeChoiceButton.addEventListener("click", playerChoiceCharge);
-}
-
-let playerChoiceCharge = () => {
-  
-}
-
-
-
-/*
+    document.getElementById("fullScreenMenuTwo").style.visibility = 'visible';
     if (playerProfession == "warrior") {
-        skillChoiceOne = "charge";
         skillChoiceOne.innerHTML = "Charge";
-        skillChoiceTwo = "cleave";
-        skillChoiceTwo.innerHTML = "Cleave";
-        skillChoiceThree = "shieldBash";
+        skillChoiceTwo.innHTML = "Cleave"
         skillChoiceThree.innerHTML = "Shield Bash";
-        }
-  if (playerProfession == "wizard") {
-        skillChoiceOne = "fireBall";
-        skillChoiceOne.innerhtml = "Fire Ball";
-        skillChoiceTwo = "frostSpray";
-        skillChoiceTwo.innerHTML = "Frost Spray";
-        skillChoiceThree = "staticShield";
-        skillChoiceThree.innerHTML = "Static Shield";
-        }
-  if (playerProfession == "rouge") {
-        skillChoiceOne = "poisonsDart";
-        skillChoiceOne.innerHTML = "Poison Dart";
-        skillChoiceTwo = "fireWorksVolley";
-        skillChoiceTwo.innerHTML = "Fireworks Volley";
-        skillChoiceThree = "doubleImage";
-        skillChoiceThree.innerHTML = "Double Image";
-        }
+    }
+    else (playerProfession == "wizard") {
+      skillChoiceOne.innerHTML = "Fire Ball";
+      skillChoiceTwo.innerHTML = "Frost Spray";
+      skillChoiceThree.innerHTML = "Static Shield";
+        
+    }
+    else (playerProfession == "rogue") {
+      skillChoiceOne.innerHTML = "Poison Dart";
+      skillChoiceTwo.innerHTML = "Fire Works Volley";
+      skillChoiceThree.innerHTML = "Double Image";
+    }
+}
 
-*/
-     // Current plan to try is to take the original 3 class buttons in the full screen menu, and set the ID attribute of them to the skills. Test with "skillChoiceOne" and such for now. 
-     // This is similar to what we did before, however the actual buttons for combat (cleaveButton for example) will be static and just hidden. Just need to ensure they each skill slot has a skill for each class occupying it, so that there isnt any issues with the formatting and such.
+skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
+skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
+skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
 
 
 
-
-
-
-/*
+let skillChoiceOneEnable = () => {
+  
+  if (playerProfession == "warrior") {
     
-  //fullScreenMenuBottom.innerHTML = "MenuOne Bottom Text";
-  //skillChoiceOne.innerHTML= skillName;
-  //skillChoiceTwo.innerHTML= "Skill Two";
-  //skillChoiceThree.innerHTML = "Skill Three";
-}
-
-const skillFunctionOne = () => {
+  }
   
-  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
-  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
-  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
-  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
-  skillSlot1.innerHTML = skillName;
-  document.getElementById("skillSlot1").setAttribute("id", skillName)
-}
+// Rename the skill to whatever it is.
+// Set the visibility of the button to visibile
+  
+ // document.getElementById("cleave").style.visibility = "visible";
 
-const skillFunctionTwo = () => {
-  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
-  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
-  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
-  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
+}
+let skillChoiceTwoEnable = () => {
+  
+   // document.getElementById("cleave").style.visibility = "visible";
+}
+let skillChoiceThreeEnable = () => {
+ // document.getElementById("cleave").style.visibility = "visible";
   
 }
-
-const skillFunctionThree = () => {
-  document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
-  document.getElementById("skillChoiceOne").style.visibility = 'hidden'
-  document.getElementById("skillChoiceTwo").style.visibility = 'hidden'
-  document.getElementById("skillChoiceThree").style.visibility = 'hidden'
-}
-
-
-//Event Listeners
-
-
-
-
-
-
-
-
-skillChoiceOne.addEventListener("click", skills);
-skillChoiceTwo.addEventListener("click", skills);
-skillChoiceThree.addEventListener("click", skills);
-
-
-
-
-
-*/
-
   
 
 
