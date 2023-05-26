@@ -154,7 +154,7 @@ img {
 }
 
 
-.fullScreenMenu, {
+.fullScreenMenu {
   margin: auto;
   position: absolute;
   display: inline-block;
