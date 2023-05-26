@@ -154,7 +154,7 @@ img {
 }
 
 
-.fullScreenMenu, #fullScreenMenuTwo {
+.fullScreenMenu, {
   margin: auto;
   position: absolute;
   display: inline-block;
@@ -171,8 +171,23 @@ img {
   text-align: center;
   visibility: visible;
 }
-#fullScreenMenuTwo {
-visibility: hidden;
+
+.fullScreenMenuTwo {
+  visibility: hidden;
+  margin: auto;
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: green;
+  border: 3px solid;  
+  border-color: #deb045;
+  border-radius: 15px;
+  height: 500px;
+  width: 500px;
+  text-align: center;
 }
 
 
