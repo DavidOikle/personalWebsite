@@ -202,7 +202,7 @@ img {
   min-width: 50%
 } 
 
-#attackButton, #skillChoiceOne, #skillChoiceTwo, #skillChoiceThree, .abilities {
+#attackButton, .abilities {
   visibility: hidden;
 }
 
