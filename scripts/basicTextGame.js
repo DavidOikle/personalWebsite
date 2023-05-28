@@ -345,7 +345,6 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
-    document.getElementById("fullScreenMenuTwo").style.visibility = 'visible';
     if (playerProfession == "warrior") {
         skillChoiceOne.innerHTML = "Charge";
         skillChoiceTwo.innHTML = "Cleave";
@@ -362,6 +361,7 @@ let menuTwo = () => {
       skillChoiceTwo.innerHTML = "Fire Works Volley";
       skillChoiceThree.innerHTML = "Double Image";
     } */
+  document.getElementById("fullScreenMenuTwo").style.visibility = "visible";
 }
 
 
