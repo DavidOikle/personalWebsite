@@ -345,6 +345,7 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
+  // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
     if (playerProfession == "warrior") {
         skillChoiceOne.innerHTML = "Charge";
         skillChoiceTwo.innHTML = "Cleave";
