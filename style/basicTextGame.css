@@ -196,7 +196,7 @@ img {
   font-size: 20px;
 }
 
-.fullScreenMenuBottom{
+.fullScreenMenuBottom {
   display: inline-flex;
   justify-content: space-between;
   min-width: 50%
