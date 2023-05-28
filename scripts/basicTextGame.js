@@ -361,7 +361,7 @@ let menuTwo = () => {
       skillChoiceTwo.innerHTML = "Fire Works Volley";
       skillChoiceThree.innerHTML = "Double Image";
     } */
-  document.getElementById("fullScreenMenuTwo").style.visibility = "visible";
+  document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
 
