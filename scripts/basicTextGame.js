@@ -354,7 +354,7 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
-  console.log("playerProfession");
+  console.log(playerProfession);
   //playerProfessionCheck = playerProfession;
   // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
     //if (playerProfessionCheck == "warrior") {};
