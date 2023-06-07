@@ -56,9 +56,7 @@ const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
 const skillSlot1 = document.getElementById("skillSlot1");
 const Charge = document.getElementById("Charge");
-const skillChoiceOne  = document.getElementById("skillChoiceOne");
-const skillChoiceTwo = document.getElementById("skillChoiceTwo");
-const skillChoiceThree = document.getElementById("skillChoiceThree");
+
 
 
 
