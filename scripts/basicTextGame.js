@@ -292,6 +292,9 @@ const playerChoiceWarrior = () => {
   playerStrengthDisplay.innerHTML = strength;
   playerDexterityDisplay.innerHTML = dexterity;
   playerIntelligenceDisplay.innerHTML = intelligence;
+  skillChoiceOne.innerHTML = "Charge";
+  skillChoiceTwo.innHTML = "Cleave";
+  skillChoiceThree.innerHTML = "Shield Bash";
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -347,9 +350,7 @@ function skillSetup() {
 let menuTwo = () => {
   // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
     if (playerProfession == "warrior") {
-        skillChoiceOne.innerHTML = "Charge";
-        skillChoiceTwo.innHTML = "Cleave";
-        skillChoiceThree.innerHTML = "Shield Bash";
+
     }
    /* else (playerProfession == "wizard") {
       skillChoiceOne.innerHTML = "Fire Ball";
