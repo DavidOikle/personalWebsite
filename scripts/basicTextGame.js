@@ -293,7 +293,7 @@ const playerChoiceWarrior = () => {
   playerDexterityDisplay.innerHTML = dexterity;
   playerIntelligenceDisplay.innerHTML = intelligence;
   skillChoiceOne.innerHTML = "Charge";
-  skillChoiceTwo.innHTML = "Cleave";
+  skillChoiceTwo.innerHTML = "Cleave";
   skillChoiceThree.innerHTML = "Shield Bash";
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
@@ -312,6 +312,9 @@ const playerChoiceRogue = () => {
   playerStrengthDisplay.innerHTML = strength;
   playerDexterityDisplay.innerHTML = dexterity;
   playerIntelligenceDisplay.innerHTML = intelligence;
+  skillChoiceOne.innerHTML = "Poison Dart";
+  skillChoiceTwo.innerHTML = "Fire Works Volley";
+  skillChoiceThree.innerHTML = "Double Image";
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -329,6 +332,9 @@ const playerChoiceWizard = () => {
   playerStrengthDisplay.innerHTML = strength;
   playerDexterityDisplay.innerHTML = dexterity;
   playerIntelligenceDisplay.innerHTML = intelligence;
+  skillChoiceOne.innerHTML = "Fire Ball";
+  skillChoiceTwo.innerHTML = "Frost Spray";
+  skillChoiceThree.innerHTML = "Static Shield";
   document.getElementsByClassName("fullScreenMenu")[0].style.visibility = 'hidden';
 };
 
@@ -352,17 +358,13 @@ let menuTwo = () => {
     if (playerProfession == "warrior") {
 
     }
-   /* else (playerProfession == "wizard") {
-      skillChoiceOne.innerHTML = "Fire Ball";
-      skillChoiceTwo.innerHTML = "Frost Spray";
-      skillChoiceThree.innerHTML = "Static Shield";
+   else (playerProfession == "wizard") {
+    
         
     }
     else (playerProfession == "rogue") {
-      skillChoiceOne.innerHTML = "Poison Dart";
-      skillChoiceTwo.innerHTML = "Fire Works Volley";
-      skillChoiceThree.innerHTML = "Double Image";
-    } */
+
+    } 
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
