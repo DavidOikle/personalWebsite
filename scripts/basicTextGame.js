@@ -354,10 +354,12 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
+  console.log("playerProfession");
+  //playerProfessionCheck = playerProfession;
   // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
-    if (playerProfession == "warrior") {};
-    if (playerProfession == "wizard") {};
-    if (playerProfession == "rogue") {};
+    //if (playerProfessionCheck == "warrior") {};
+   // if (playerProfessionCheck == "wizard") {};
+    //if (playerProfessionCheck == "rogue") {};
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
