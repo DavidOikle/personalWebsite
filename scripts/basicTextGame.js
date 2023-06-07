@@ -24,6 +24,7 @@ var enemyMaxHealth = null;
 var skillArray = skillArrayExport;
 var skillName = "";
 var skillDamage = null;
+var playerProfessionCheck = "";
 
 
 
@@ -355,11 +356,12 @@ function skillSetup() {
 
 let menuTwo = () => {
   console.log(playerProfession);
-  //playerProfessionCheck = playerProfession;
+  let playerProfessionCheck = playerProfession;
+  console.log(playerProfessionCheck);
   // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
-    //if (playerProfessionCheck == "warrior") {};
-   // if (playerProfessionCheck == "wizard") {};
-    //if (playerProfessionCheck == "rogue") {};
+    if (playerProfessionCheck == "warrior") {};
+    if (playerProfessionCheck == "wizard") {};
+    if (playerProfessionCheck == "rogue") {};
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
