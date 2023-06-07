@@ -355,16 +355,9 @@ function skillSetup() {
 
 let menuTwo = () => {
   // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
-    if (playerProfession == "warrior") {
-
-    }
-   else (playerProfession == "wizard") {
-    
-        
-    }
-    else (playerProfession == "rogue") {
-
-    } 
+    if (playerProfession == "warrior") {};
+   else if (playerProfession == "wizard") {};
+   else if (playerProfession == "rogue") {};
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
