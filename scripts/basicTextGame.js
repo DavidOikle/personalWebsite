@@ -355,13 +355,11 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
-  console.log(playerProfession);
   playerProfessionCheck = playerProfession;
-  console.log(playerProfessionCheck);
-  // Need to import the skillChoiceOne etc into the DOM first at the top of the file.
-    if (playerProfessionCheck == "warrior") {};
+
+   /* if (playerProfessionCheck == "warrior") {};
     if (playerProfessionCheck == "wizard") {};
-    if (playerProfessionCheck == "rogue") {};
+    if (playerProfessionCheck == "rogue") {}; */
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
@@ -370,13 +368,14 @@ let menuTwo = () => {
 
 let skillChoiceOneEnable = () => {
   playerProfessionCheck = playerProfession;
-  if (playerProfession == "warrior") {
+  console.log(playerProfession);
+  if (playerProfessionCheck == "warrior") {
     document.getElementById("charge").style.visibility = "visible";
   }
-  if (playerProfession == "wizard") {
+  if (playerProfessionCheck == "wizard") {
     document.getElementById("fireBall").style.visibility = "visible";
   }
-  if (playerProfession == "rogue") {
+  if (playerProfessionCheck == "rogue") {
     document.getElementById("poisonDart").style.visibility = "visible";
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
@@ -384,13 +383,13 @@ let skillChoiceOneEnable = () => {
 
 let skillChoiceTwoEnable = () => {
   playerProfessionCheck = playerProfession;
-  if (playerProfession == "warrior") {
+  if (playerProfessionCheck == "warrior") {
     document.getElementById("cleave").style.visibility = "visible";
   }
-  if (playerProfession == "wizard") {
+  if (playerProfessionCheck == "wizard") {
     document.getElementById("frostSpray").style.visibility = "visible";  
   }
-  if (playerProfession == "rogue") {
+  if (playerProfessionCheck == "rogue") {
     document.getElementById("fireWorksVolley").style.visibility = "visible";  
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
@@ -398,13 +397,13 @@ let skillChoiceTwoEnable = () => {
 
 let skillChoiceThreeEnable = () => {
   playerProfessionCheck = playerProfession;
-  if (playerProfession == "warrior") {
+  if (playerProfessionCheck == "warrior") {
     document.getElementById("shieldBash").style.visibility = "visible";
   }
-  if (playerProfession == "wizard") {
+  if (playerProfessionCheck == "wizard") {
     document.getElementById("staticShield").style.visibility = "visible";  
   }
-  if (playerProfession == "rogue") {
+  if (playerProfessionCheck == "rogue") {
     document.getElementById("doubleImage").style.visibility = "visible";  
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
