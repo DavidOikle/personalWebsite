@@ -365,29 +365,50 @@ let menuTwo = () => {
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
-
+// Setup listeners for skill choice buttons
+// 
 
 let skillChoiceOneEnable = () => {
-  
+  playerProfessionCheck = playerProfession;
   if (playerProfession == "warrior") {
-    
+    document.getElementById("charge").style.visibility = "visible";
   }
-  
-// Rename the skill to whatever it is.
-// Set the visibility of the button to visibile
-  
- // document.getElementById("cleave").style.visibility = "visible";
+  if (playerProfession == "wizard") {
+    document.getElementById("fireBall").style.visibility = "visible";
+  }
+  if (playerProfession == "rogue") {
+    document.getElementById("poisonDart").style.visibility = "visible";
+  }
+  document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
+}
 
-}
 let skillChoiceTwoEnable = () => {
-  
-   // document.getElementById("cleave").style.visibility = "visible";
+  playerProfessionCheck = playerProfession;
+  if (playerProfession == "warrior") {
+    document.getElementById("cleave").style.visibility = "visible";
+  }
+  if (playerProfession == "wizard") {
+    document.getElementById("frostSpray").style.visibility = "visible";  
+  }
+  if (playerProfession == "rogue") {
+    document.getElementById("fireWorksVolley").style.visibility = "visible";  
+  }
+  document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }
+
 let skillChoiceThreeEnable = () => {
- // document.getElementById("cleave").style.visibility = "visible";
-  
-}
-  
+  playerProfessionCheck = playerProfession;
+  if (playerProfession == "warrior") {
+    document.getElementById("shieldBash").style.visibility = "visible";
+  }
+  if (playerProfession == "wizard") {
+    document.getElementById("staticShield").style.visibility = "visible";  
+  }
+  if (playerProfession == "rogue") {
+    document.getElementById("doubleImage").style.visibility = "visible";  
+  }
+  document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
+}  
 
 
 
