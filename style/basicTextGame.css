@@ -202,7 +202,7 @@ img {
   min-width: 50%
 } 
 
-#attackButton, .abilities #charge {
+#attackButton, .abilities {
   visibility: hidden;
 }
 
