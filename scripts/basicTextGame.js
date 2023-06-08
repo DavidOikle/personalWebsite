@@ -57,7 +57,7 @@ const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
 //const = document.getElementById("skillSlot1");
 
-const charge = document.getElementById("charge");
+/* const charge = document.getElementById("charge");
 const fireBall = document.getElementById("fireBall");
 const poisonDart = document.getElementById("poisonDart");
 const cleave = document.getElementById("cleave");
@@ -65,7 +65,7 @@ const frostSpray = document.getElementById("frostSpray");
 const fireWorksVolley = document.getElementById("fireWorksVolley");
 const shieldBash = document.getElementById("shieldBash");
 const staticShield = document.getElementById("staticShield");
-const doubleImage = document.getElementById("doubleImage");
+const doubleImage = document.getElementById("doubleImage"); */
 
 
 
