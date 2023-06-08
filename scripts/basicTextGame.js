@@ -55,8 +55,17 @@ const fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBott
 const skillChoiceOne = document.getElementById("skillChoiceOne");
 const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
-const skillSlot1 = document.getElementById("skillSlot1");
-const Charge = document.getElementById("Charge");
+//const = document.getElementById("skillSlot1");
+
+const charge = document.getElementById("charge");
+const fireBall = document.getElementById("fireBall");
+const poisonDart = document.getElementById("poisonDart");
+const cleave = document.getElementById("cleave");
+const frostSpray = document.getElementById("frostSpray");
+const fireWorksVolley = document.getElementById("fireWorksVolley");
+const shieldBash = document.getElementById("shieldBash");
+const staticShield = document.getElementById("staticShield");
+const doubleImage = document.getElementById("doubleImage");
 
 
 
@@ -363,9 +372,6 @@ let menuTwo = () => {
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
-// Setup listeners for skill choice buttons
-// 
-
 let skillChoiceOneEnable = () => {
   playerProfessionCheck = playerProfession;
   console.log(playerProfession);
@@ -408,6 +414,7 @@ let skillChoiceThreeEnable = () => {
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }  
+
 
 
 
