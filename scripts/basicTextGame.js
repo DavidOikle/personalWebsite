@@ -376,8 +376,9 @@ let menuTwo = () => {
 
 let skillChoiceOneEnable = () => {
   playerProfessionCheck = playerProfession;
-  console.log(playerProfession);
+ 
  // if (playerProfessionCheck === "warrior") {
+  console.log(playerProfession);
     document.getElementById("chargeButton").style.visibility = "visible";
   //}
   if (playerProfessionCheck === "wizard") {
