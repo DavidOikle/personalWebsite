@@ -369,14 +369,14 @@ let menuTwo = () => {
 
 let skillChoiceOneEnable = () => {
  
-  if (playerProfession == "warrior) {
+  if (playerProfession == "warrior") {
   console.log(playerProfession);
     document.getElementById("chargeButton").style.visibility = "visible";
   }
-  if (playerProfession == 'wizard') {
+  if (playerProfession == "wizard") {
     document.getElementById("fireBallButton").style.visibility = "visible";
   }
-  if (playerProfession == 'rogue') {
+  if (playerProfession == "rogue") {
     document.getElementById("poisonDartButton").style.visibility = "visible";
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
@@ -388,10 +388,10 @@ let skillChoiceTwoEnable = () => {
   if (playerProfession == "warrior) {
     document.getElementById("cleaveButton").style.visibility = "visible";
   }
-  if (playerProfession == 'wizard') {
+  if (playerProfession == "wizard") {
     document.getElementById("frostSprayButton").style.visibility = "visible";  
   }
-  if (playerProfession == 'rogue') {
+  if (playerProfession == "rogue") {
     document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
