@@ -385,7 +385,7 @@ let skillChoiceOneEnable = () => {
 let skillChoiceTwoEnable = () => {
   //playerProfessionCheck = playerProfession;
   
-  if (playerProfession == "warrior) {
+  if (playerProfession == "warrior") {
     document.getElementById("cleaveButton").style.visibility = "visible";
   }
   if (playerProfession == "wizard") {
