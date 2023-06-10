@@ -25,10 +25,6 @@ var skillArray = skillArrayExport;
 var skillName = "";
 var skillDamage = null;
 var playerProfessionCheck = "";
-var playerProfessionCheck1 = "warrior";
-var playerProfessionCheck2 = "wizard";
-var playerProfessionCheck3 = "rogue";
-
 
 //DOM imports from HTML into JS
 const randomNumAttack = document.getElementById("attackButton");
@@ -294,7 +290,7 @@ let playerExperienceCheck = () => {
 //Player profession choice functions
 
 const playerChoiceWarrior = () => {
-  playerProfession = "Warrior";
+  playerProfession = "warrior";
   playerHealth = 10;
   playerMaxHealth = 10;
   strength = 14;
@@ -314,7 +310,7 @@ const playerChoiceWarrior = () => {
 
 const playerChoiceRogue = () => {
 
-  playerProfession = "Rogue";
+  playerProfession = "rogue";
   playerHealth = 8;
   playerMaxHealth = 8;
   strength = 10;
@@ -334,7 +330,7 @@ const playerChoiceRogue = () => {
 
 const playerChoiceWizard = () => {
 
-  playerProfession = "Wizard";
+  playerProfession = "wizard";
   playerHealth = 6;
   playerMaxHealth = 6;
   strength = 8;
@@ -368,50 +364,47 @@ function skillSetup() {
 }
 
 let menuTwo = () => {
-  playerProfessionCheck = playerProfession;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
 let skillChoiceOneEnable = () => {
-  playerProfessionCheck = playerProfession;
  
-  if (playerProfessionCheck == playerProfessionCheck1) {
+  if (playerProfession == "warrior) {
   console.log(playerProfession);
     document.getElementById("chargeButton").style.visibility = "visible";
   }
-  if (playerProfessionCheck == 'wizard') {
+  if (playerProfession == 'wizard') {
     document.getElementById("fireBallButton").style.visibility = "visible";
   }
-  if (playerProfessionCheck == 'rogue') {
+  if (playerProfession == 'rogue') {
     document.getElementById("poisonDartButton").style.visibility = "visible";
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
 }
 
 let skillChoiceTwoEnable = () => {
-  playerProfessionCheck = playerProfession;
+  //playerProfessionCheck = playerProfession;
   
-  if (playerProfessionCheck == playerProfessionCheck1) {
+  if (playerProfession == "warrior) {
     document.getElementById("cleaveButton").style.visibility = "visible";
   }
-  if (playerProfessionCheck == 'wizard') {
+  if (playerProfession == 'wizard') {
     document.getElementById("frostSprayButton").style.visibility = "visible";  
   }
-  if (playerProfessionCheck == 'rogue') {
+  if (playerProfession == 'rogue') {
     document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }
 
 let skillChoiceThreeEnable = () => {
-  playerProfessionCheck = playerProfession;
-  if (playerProfessionCheck == playerProfessionCheck1) {
+  if (playerProfession == "warrior") {
     document.getElementById("shieldBashButton").style.visibility = "visible";
   }
-  if (playerProfessionCheck == wizard) {
+  if (playerProfession == "wizard") {
     document.getElementById("staticShieldButton").style.visibility = "visible";  
   }
-  if (playerProfessionCheck == rogue) {
+  if (playerProfession == "rogue") {
     document.getElementById("doubleImageButton").style.visibility = "visible";  
   }
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
