@@ -370,21 +370,21 @@ let menuTwo = () => {
 
 let skillChoiceOneEnable = () => {
   skillSlotOneActive = true;
-  return skillSlotOneActive;
+  //return skillSlotOneActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
 }
 
 
 let skillChoiceTwoEnable = () => {
   skillSlotTwoActive = true;
-  return skillSlotTwoActive;
+ // return skillSlotTwoActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }
 
 
 let skillChoiceThreeEnable = () => {
   skillSlotThreeActive = true;
-  return skillSlotThreeActive;
+  //return skillSlotThreeActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }  
 
