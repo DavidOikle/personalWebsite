@@ -95,7 +95,7 @@ var randomEnemyFunction = () => {
       }
     }
 
-}
+
   
     if (skillSlotTwoeActive == true) {
       if (playerProfession == "warrior") {
@@ -109,7 +109,7 @@ var randomEnemyFunction = () => {
       }
     }
 
-}
+
   
   if (skillSlotThreeActive == true) {
       if (playerProfession == "warrior") {
