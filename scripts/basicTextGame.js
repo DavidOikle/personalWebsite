@@ -25,6 +25,9 @@ var skillArray = skillArrayExport;
 var skillName = "";
 var skillDamage = null;
 var playerProfessionCheck = "";
+var skillSlotOneActive = false;
+var skillSlotTwoActive = false;
+var skillSlotThreeActive = false;
 
 //DOM imports from HTML into JS
 const randomNumAttack = document.getElementById("attackButton");
@@ -53,25 +56,6 @@ const fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBott
 const skillChoiceOne = document.getElementById("skillChoiceOne");
 const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
-//const = document.getElementById("skillSlot1");
-
-/* const charge = document.getElementById("charge");
-const fireBall = document.getElementById("fireBall");
-const poisonDart = document.getElementById("poisonDart");
-const cleave = document.getElementById("cleave");
-const frostSpray = document.getElementById("frostSpray");
-const fireWorksVolley = document.getElementById("fireWorksVolley");
-const shieldBash = document.getElementById("shieldBash");
-const staticShield = document.getElementById("staticShield");
-const doubleImage = document.getElementById("doubleImage"); */
-
-
-
-
-
-
-
-
 
 
 
@@ -83,37 +67,6 @@ function combat() {
   enemyAttack();
   playerExperienceCheck()
 }
-
-//Individual combat functions
-
-/* Parent player attack function that is filled by the other functions\
-   
-    Parent variable of "playerDamage = "Null""
-parentAttack = () => {
-  
-  enemyHealth = (enemyHealth - playerDamage);
-  enemyHealthDisplay.innerHTML = enemyHealth;
-      
-  if (enemyHealth <= 0) {
-  enemyHealth = null;
-  enemyMaxHealth = null;
-  enemyProfession = '';
-  enemyHealthDisplay.innerHTML = enemyHealth;
-  enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
-  enemyProfessionDisplay.innerHTML = enemyProfession;
-  document.getElementById("randomEnemyButton").style.visibility = "visible";
-  document.getElementById("attackButton").style.visibility = "hidden";
-  playerExperience++;
-  playerExperienceDisplay.innerHTML = playerExperience;
-
-  playerHealth = playerHealth + playerMaxHealth * Math.round(0.5);
-  if (playerHealth > playerMaxHealth) {
-    playerHealth = playerMaxHealth
-  }
-}
- playerCombatLog.innerHTML = `You strike for ${playerDamageRoll} damage.`;
-}
- */
 
 
 
@@ -129,11 +82,48 @@ var randomEnemyFunction = () => {
     enemyMaxHealthDisplay.innerHTML = enemyMaxHealth;
     enemyProfessionDisplay.innerHTML = enemyProfession;
       document.getElementById("attackButton").style.visibility = "visible";
-      document.getElementById("chargeButton").style.visibility = "visible";
+
+    if (skillSlotOneActive == true) {
+      if playerProfession == "warrior" {
+       document.getElementById("chargeButton").style.visibility = "visible";
+      }
+      else if playerProfession == "wizard" {
+        document.getElementById("fireBallButton").style.visibility = "visible";
+      }
+      else if playerProfession == "rogue" {
+        document.getElementById("poisonDartButton").style.visibility = "visible";
+      }
+    }
 
 }
+  
+    if (skillSlotTwoeActive == true) {
+      if playerProfession == "warrior" {
+  document.getElementById("cleaveButton").style.visibility = "visible";
+      }
+      else if playerProfession == "wizard" {
+            document.getElementById("frostSprayButton").style.visibility = "visible";  
+      }
+      else if playerProfession == "rogue" {
+           document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
+      }
+    }
 
+}
+  
+  if (skillSlotThreeActive == true) {
+      if playerProfession == "warrior" {
+    document.getElementById("shieldBashButton").style.visibility = "visible";
+      }
+      else if playerProfession == "wizard" {
+    document.getElementById("staticShieldButton").style.visibility = "visible";  
+      }
+      else if playerProfession == "rogue" {
+    document.getElementById("doubleImageButton").style.visibility = "visible";  
+      }
+    }
 
+}
 
 
 
@@ -255,7 +245,15 @@ let handleAttack = () => {
   enemyProfessionDisplay.innerHTML = enemyProfession;
   document.getElementById("randomEnemyButton").style.visibility = "visible";
   document.getElementById("attackButton").style.visibility = "hidden";
-  document.getElementById("chargeButton").style.visibility = "hidden";
+  document.getElementById("chargeButton").style.visibility = "visible";
+  document.getElementById("fireBallButton").style.visibility = "visible";
+  document.getElementById("poisonDartButton").style.visibility = "visible";
+  document.getElementById("cleaveButton").style.visibility = "visible";
+  document.getElementById("frostSprayButton").style.visibility = "visible";  
+  document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
+  document.getElementById("shieldBashButton").style.visibility = "visible";
+  document.getElementById("staticShieldButton").style.visibility = "visible";  
+  document.getElementById("doubleImageButton").style.visibility = "visible";  
   playerExperience++;
   playerExperienceDisplay.innerHTML = playerExperience;
 
@@ -363,57 +361,36 @@ function skillSetup() {
   menuTwo();
 }
 
+
+
 let menuTwo = () => {
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
 
+
 let skillChoiceOneEnable = () => {
- 
-  if (playerProfession == "warrior") {
-  console.log(playerProfession);
-    document.getElementById("chargeButton").style.visibility = "visible";
-  }
-  if (playerProfession == "wizard") {
-    document.getElementById("fireBallButton").style.visibility = "visible";
-  }
-  if (playerProfession == "rogue") {
-    document.getElementById("poisonDartButton").style.visibility = "visible";
-  }
+  skillSlotOneActive = true;
+  return skillSlotOneActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";  
 }
 
+
 let skillChoiceTwoEnable = () => {
-  //playerProfessionCheck = playerProfession;
-  
-  if (playerProfession == "warrior") {
-    document.getElementById("cleaveButton").style.visibility = "visible";
-  }
-  if (playerProfession == "wizard") {
-    document.getElementById("frostSprayButton").style.visibility = "visible";  
-  }
-  if (playerProfession == "rogue") {
-    document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
-  }
+  skillSlotTwoActive = true;
+  return skillSlotTwoActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }
 
+
 let skillChoiceThreeEnable = () => {
-  if (playerProfession == "warrior") {
-    document.getElementById("shieldBashButton").style.visibility = "visible";
-  }
-  if (playerProfession == "wizard") {
-    document.getElementById("staticShieldButton").style.visibility = "visible";  
-  }
-  if (playerProfession == "rogue") {
-    document.getElementById("doubleImageButton").style.visibility = "visible";  
-  }
+  skillSlotThreeActive = true;
+  return skillSlotThreeActive;
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "hidden";
 }  
 
 
 
-
-
+  
 
 skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
 skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
