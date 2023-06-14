@@ -84,13 +84,13 @@ var randomEnemyFunction = () => {
       document.getElementById("attackButton").style.visibility = "visible";
 
     if (skillSlotOneActive == true) {
-      if playerProfession == "warrior" {
+      if (playerProfession == "warrior") {
        document.getElementById("chargeButton").style.visibility = "visible";
       }
-      else if playerProfession == "wizard" {
+      else if (playerProfession == "wizard") {
         document.getElementById("fireBallButton").style.visibility = "visible";
       }
-      else if playerProfession == "rogue" {
+      else if (playerProfession == "rogue") {
         document.getElementById("poisonDartButton").style.visibility = "visible";
       }
     }
@@ -98,13 +98,13 @@ var randomEnemyFunction = () => {
 }
   
     if (skillSlotTwoeActive == true) {
-      if playerProfession == "warrior" {
+      if (playerProfession == "warrior") {
   document.getElementById("cleaveButton").style.visibility = "visible";
       }
-      else if playerProfession == "wizard" {
+      else if (playerProfession == "wizard") {
             document.getElementById("frostSprayButton").style.visibility = "visible";  
       }
-      else if playerProfession == "rogue" {
+      else if (playerProfession == "rogue") {
            document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
       }
     }
@@ -112,13 +112,13 @@ var randomEnemyFunction = () => {
 }
   
   if (skillSlotThreeActive == true) {
-      if playerProfession == "warrior" {
+      if (playerProfession == "warrior") {
     document.getElementById("shieldBashButton").style.visibility = "visible";
       }
-      else if playerProfession == "wizard" {
+      else if (playerProfession == "wizard") {
     document.getElementById("staticShieldButton").style.visibility = "visible";  
       }
-      else if playerProfession == "rogue" {
+      else if (playerProfession == "rogue") {
     document.getElementById("doubleImageButton").style.visibility = "visible";  
       }
     }
