@@ -245,15 +245,15 @@ let handleAttack = () => {
   enemyProfessionDisplay.innerHTML = enemyProfession;
   document.getElementById("randomEnemyButton").style.visibility = "visible";
   document.getElementById("attackButton").style.visibility = "hidden";
-  document.getElementById("chargeButton").style.visibility = "visible";
-  document.getElementById("fireBallButton").style.visibility = "visible";
-  document.getElementById("poisonDartButton").style.visibility = "visible";
-  document.getElementById("cleaveButton").style.visibility = "visible";
-  document.getElementById("frostSprayButton").style.visibility = "visible";  
-  document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
-  document.getElementById("shieldBashButton").style.visibility = "visible";
-  document.getElementById("staticShieldButton").style.visibility = "visible";  
-  document.getElementById("doubleImageButton").style.visibility = "visible";  
+  document.getElementById("chargeButton").style.visibility = "hidden";
+  document.getElementById("fireBallButton").style.visibility = "hidden";
+  document.getElementById("poisonDartButton").style.visibility = "hidden";
+  document.getElementById("cleaveButton").style.visibility = "hidden";
+  document.getElementById("frostSprayButton").style.visibility = "hidden";  
+  document.getElementById("fireWorksVolleyButton").style.visibility = "hidden";  
+  document.getElementById("shieldBashButton").style.visibility = "hidden";
+  document.getElementById("staticShieldButton").style.visibility = "hidden";  
+  document.getElementById("doubleImageButton").style.visibility = "hidden";  
   playerExperience++;
   playerExperienceDisplay.innerHTML = playerExperience;
 
