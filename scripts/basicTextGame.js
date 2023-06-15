@@ -97,7 +97,7 @@ var randomEnemyFunction = () => {
 
 
   
-    if (skillSlotTwoeActive == true) {
+    if (skillSlotTwoActive == true) {
       if (playerProfession == "warrior") {
   document.getElementById("cleaveButton").style.visibility = "visible";
       }
