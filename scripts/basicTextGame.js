@@ -56,7 +56,15 @@ const fullScreenMenuBottom = document.getElementsByClassName("fullScreenMenuBott
 const skillChoiceOne = document.getElementById("skillChoiceOne");
 const skillChoiceTwo = document.getElementById("skillChoiceTwo");
 const skillChoiceThree = document.getElementById("skillChoiceThree");
-
+const skillChargeButton = document.getElementById("chargeButton");
+const skillFireBallButton = document.getElementById("fireBallButton");
+const skillPoisonDartButton = document.getElementById("poisonDartButton");
+const skillCleaveButton = document.getElementById("cleaveButton");
+const skillFireWorksVolleyButton = document.getElementById("fireWorksVolleyButton");
+const skillShieldBashButton = document.getElementById("shieldBashButton");
+const skillStaticShieldButton = document.getElementById("staticShieldButton");
+const skillDoubleImageButton = document.getElementById("doubleImageButton"); 
+const skillFrostSprayButton = document.getElementById("frostSprayButton");
 
 
 // Combat Functions
@@ -395,6 +403,15 @@ let skillChoiceThreeEnable = () => {
 skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
 skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
 skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
+skillChargeButton.addEventListener("click" charge);
+skillFireBallButton.addEventListener("click" fireBall);
+skillPoisonDartButton.addEventListener("click" poisonDart);
+skillCleaveButton.addEventListener("click" cleave);
+skillFireWorksVolleyButton.addEventListener("click" fireWorksVolley);
+skillShieldBashButton.addEventListener("click" shieldBash);
+skillStaticShieldButton.addEventListener("click" staticShield);
+skillDoubleImageButton.addEventListener("click" doubleImage);
+skillFrostSprayButton.addEventListener("click" frostSpray);
 
 // Listens for new buttons, run the above functions, adjust to test data with 2.
 
