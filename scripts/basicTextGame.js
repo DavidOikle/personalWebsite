@@ -162,75 +162,48 @@ let meleeAttack = () => {
 }
 
 let charge = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+  playerDamageRoll = 1;
   return playerDamageRoll;
 } 
 
 let cleave = () => {
-    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
-  if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
-  };
   return playerDamageRoll;
 }
 
 let shieldBash = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (strength - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+  playerDamageRoll = 1;
   return playerDamageRoll;
 }
 
 
 let fireBall = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (intelligence - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+  playerDamageRoll = 1;
   return playerDamageRoll;
 }
 
 let frostSpray = () => {
-  playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (intelligence - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+  playerDamageRoll = 1;
   return playerDamageRoll;
 }
 
 let staticShield = () => {
-    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
-  if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
-  };
   return playerDamageRoll;
 }
 
 let poisonDart = () => {
-      playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+      playerDamageRoll = 1;
   return playerDamageRoll;
 }
 
 let fireWorksVolley = () => {
-      playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
-  if (playerDamageRoll < 1) {
-    playerDamageRoll = 1;
-  };
+      playerDamageRoll = 1;
   return playerDamageRoll;
 }
 
 let doubleImage = () => {
-    playerDamageRoll = Math.floor(Math.random() * 4  ) + 1 + (dexterity - 10)
-  if (playerDamageRoll < 1) {
     playerDamageRoll = 1;
-  };
   return playerDamageRoll;
 }
 
