@@ -376,15 +376,25 @@ let skillChoiceThreeEnable = () => {
 skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
 skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
 skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
+
 skillChargeButton.addEventListener("click" charge);
+skillChargeButton.addEventListener("click", combat);
 skillFireBallButton.addEventListener("click" fireBall);
+skillFireBallButton.addEventListener("click", combat);
 skillPoisonDartButton.addEventListener("click" poisonDart);
+skillPoisonDartButton.addEventListener("click", combat);
 skillCleaveButton.addEventListener("click" cleave);
+skillCleaveButton.addEventListener("click", combat);
 skillFireWorksVolleyButton.addEventListener("click" fireWorksVolley);
+skillFireWorksVolleyButton.addEventListener("click", combat);
 skillShieldBashButton.addEventListener("click" shieldBash);
+skillShieldBashButton.addEventListener("click", combat);
 skillStaticShieldButton.addEventListener("click" staticShield);
+skillStaticShieldButton.addEventListener("click", combat);
 skillDoubleImageButton.addEventListener("click" doubleImage);
+skillDoubleImageButton.addEventListener("click", combat);
 skillFrostSprayButton.addEventListener("click" frostSpray);
+skillFrostSprayButton.addEventListener("click", combat);
 
 // Listens for new buttons, run the above functions, adjust to test data with 2.
 
