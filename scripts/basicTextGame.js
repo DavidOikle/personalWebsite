@@ -379,7 +379,7 @@ skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
 
 skillChargeButton.addEventListener("click", charge);
 skillChargeButton.addEventListener("click", combat);
-skillFireBallButton.addEventListener("click" fireBall);
+skillFireBallButton.addEventListener("click", fireBall);
 skillFireBallButton.addEventListener("click", combat);
 skillPoisonDartButton.addEventListener("click", poisonDart);
 skillPoisonDartButton.addEventListener("click", combat);
