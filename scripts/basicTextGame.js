@@ -396,7 +396,7 @@ skillChoiceOne.addEventListener("click", skillChoiceOneEnable);
 skillChoiceTwo.addEventListener("click", skillChoiceTwoEnable);
 skillChoiceThree.addEventListener("click", skillChoiceThreeEnable);
 
-
+// Listens for new buttons, run the above functions, adjust to test data with 2.
 
 
 
