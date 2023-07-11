@@ -342,8 +342,6 @@ function skillSetup() {
   menuTwo();
 }
 
-
-
 let menuTwo = () => {
   document.getElementsByClassName("fullScreenMenuTwo")[0].style.visibility = "visible";
 }
@@ -369,7 +367,102 @@ let skillChoiceThreeEnable = () => {
   skillSlotThreeActive;
 }  
 
+/*
+Pseduo code for fighting multiple enemies.
+Clicking the Random Enemey button runs a function that gives a random number between 1 and 3.
+Based on the result, fill in the Enemey Positions the same number of times.
 
+Additional steps:
+Letting the player select which enemy to attack. For AOE abilities, make them by default hit all foes for now. Eventuall can tweak it so it hits adjecent enemies, or an additional 1 or 2.
+Making enemies do more damage based on how many are in play at any given time. For now, maybe just add 50% to the enemy damage roll based on the number of foes? 1 rat does a max of say 2 damage. 2 can do 3?
+
+MULTIPLE ENEMIES
+
+let generateEnemeies = () => {
+  numOfEnemies = Math.floor(Math.random() * max)
+  if (numOfEnemies) == 1 {
+    
+  }
+}
+
+
+
+
+var randomEnemyFunction = () => {
+  numOfEnemies = Math.floor(Math.random() * max)
+  if (numOfEnemies == 1) {   
+    var randomEnemy = enemyArray[Math.floor(Math.random() * enemyArray.length)];
+    enemyProfession = randomEnemy[0];
+    enemyHealth = randomEnemy[1];
+    enemyMaxHealth = randomEnemy[1]; 
+    }
+   if (numOfEnemies == 2) {   
+    var randomEnemy = enemyArray[Math.floor(Math.random() * enemyArray.length)];
+    enemyProfession = randomEnemy[0];
+    enemyHealth = randomEnemy[1];
+    enemyMaxHealth = randomEnemy[1]; 
+    }
+ if (numOfEnemies == 3) {   
+    var randomEnemy = enemyArray[Math.floor(Math.random() * enemyArray.length)];
+    enemyProfession = randomEnemy[0];
+    enemyHealth = randomEnemy[1];
+    enemyMaxHealth = randomEnemy[1]; 
+    }
+
+    
+  
+    document.getElementById("randomEnemyButton").style.visibility = "hidden";
+      document.getElementById("attackButton").style.visibility = "visible";
+
+    if (skillSlotOneActive == true) {
+      if (playerProfession == "warrior") {
+       document.getElementById("chargeButton").style.visibility = "visible";
+      }
+      else if (playerProfession == "wizard") {
+        document.getElementById("fireBallButton").style.visibility = "visible";
+      }
+      else if (playerProfession == "rogue") {
+        document.getElementById("poisonDartButton").style.visibility = "visible";
+      }
+    }
+
+
+  
+    if (skillSlotTwoActive == true) {
+      if (playerProfession == "warrior") {
+  document.getElementById("cleaveButton").style.visibility = "visible";
+      }
+      else if (playerProfession == "wizard") {
+            document.getElementById("frostSprayButton").style.visibility = "visible";  
+      }
+      else if (playerProfession == "rogue") {
+           document.getElementById("fireWorksVolleyButton").style.visibility = "visible";  
+      }
+    }
+
+
+  
+  if (skillSlotThreeActive == true) {
+      if (playerProfession == "warrior") {
+    document.getElementById("shieldBashButton").style.visibility = "visible";
+      }
+      else if (playerProfession == "wizard") {
+    document.getElementById("staticShieldButton").style.visibility = "visible";  
+      }
+      else if (playerProfession == "rogue") {
+    document.getElementById("doubleImageButton").style.visibility = "visible";  
+      }
+    }
+
+}
+
+
+
+
+
+
+
+*/
 
   
 
